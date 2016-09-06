@@ -1,0 +1,21 @@
+gems: [jekyll-paginate]
+# Site settings
+title: Yaoyu Yang Homepage
+email: yaoyu.yang88@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Yaoyu Yang's homepage.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yaoyuyang.com" # the base hostname & protocol for your site
+twitter_username: yaoyuyang
+github_username:  sunshineyyy
+
+# paginate settings
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# Build settings
+markdown: kramdown
+sass:
+    sass_dir: _sass
+
+# header-img: "images/Pensieve2.jpg"

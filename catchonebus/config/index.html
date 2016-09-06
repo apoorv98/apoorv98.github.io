@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>CatchOneBus Settings</title>
+  <link rel='stylesheet' type='text/css' href='css/slate.min.css'>
+  <script src='js/slate.min.js'></script>
+  <style>
+  .title {
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #888888;
+    text-align: center;
+  }
+  </style>
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class='item-container'>
+      <div class='item-container-content'>
+        <div class='item'>
+          Thanks for using CatchOneBus!
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container">
+      <div class="item-container-header">Follow us on social networks</div>
+      <div class="item-container-content">
+        <label class="item">
+          <!-- <a href="https://twitter.com/CatchOneBus">Twitter</a> -->
+          <a href="https://twitter.com/CatchOneBus" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CatchOneBus</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </label>
+        <label class="item">
+          <a class="twitter-share-button"
+            href="https://twitter.com/intent/tweet?text=Check out @CatchOneBus for @Pebble, it's super cool to check bus real time arrivals on your wrist with one click!"
+            data-size="large">
+          Tweet about CatchOneBus</a>
+          <link rel="canonical"
+  href="https://apps.getpebble.com/en_US/application/55331752ac075102f30000a7">
+        </label>
+      </div>
+      <div class='item-container-footer'>
+        Follow us on Twitter to give feedbacks and receive latest updates.
+      </div>
+    </div>
+
+    <div class="item-container">
+      <div class="item-container-content">
+        <div class="item-container-header">Sign up Email Communications</div>
+        <label class="item">
+          <form action="//yaoyuyang.us12.list-manage.com/subscribe/post?u=a0dcb8efc3d6045d6bf675a5e&amp;id=821a287d64" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+            <!-- <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required> -->
+            <div class="item-input-wrapper item-input-wrapper-button">
+              <input type="email" value="" name="EMAIL" class="item-input" id="mce-EMAIL" placeholder="Email address" required>
+            </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a0dcb8efc3d6045d6bf675a5e_821a287d64" tabindex="-1" value=""></div>
+            <div class="button-container"><input type="submit" value="SIGN UP" name="subscribe" id="mc-embedded-subscribe" class="item-button item-input-button"></div>
+          </form>
+        </label>
+      </div>
+
+      <div class='item-container-footer'>
+        Enter your email address to receive communications from CatchOneBus developer team.
+      </div>
+    </div>
+
+      <div class="item-container">
+        <div class="item-container-header">Donation</div>
+        <div class="item-container-content">
+          <label class="item">
+            PayPal: yaoyu@uw.edu
+          </label>
+        </div>
+      </div>
+
+      <div class='item-container-footer'>
+        Your donation will help CatchOneBus make cool new features you need and reach more people in other places!
+      </div>
+    </div>
+
+  </body>
+
+  <!--End mc_embed_signup-->
+  <script>
+  // var signupButton = document.getElementById('mc-embedded-subscribe');
+  // signupButton.addEventListener('click', function() {
+  //   console.log('SIGN UP');
+  //   var emailAddress = document.getElementById('mce-EMAIL');
+  //   console.log(emailAddress.value)
+  //   localStorage['emailAddress'] = emailAddress.value
+  // });
+
+  function getQueryParam(variable, defaultValue) {
+    var query = location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      if (pair[0] === variable) {
+        return decodeURIComponent(pair[1]);
+      }
+    }
+    return defaultValue || false;
+  }
+
+  (function() {
+    var emailAddress = document.getElementById('mce-EMAIL');
+    // Load any previously saved configuration, if available
+    if(localStorage['emailAddress']) {
+      emailAddress.value = localStorage['emailAddress']
+    }
+  })();
+  </script>
+</html>
