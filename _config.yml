@@ -1,13 +1,13 @@
 gems: [jekyll-paginate]
 # Site settings
-title: Yaoyu Yang Homepage
-email: yaoyu.yang88@gmail.com
+title: Apoorv Jagtap Homepage
+email: apoorvjagtap@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Yaoyu Yang's homepage.
+  Apoorv Jagtap's homepage.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yaoyuyang.com" # the base hostname & protocol for your site
-twitter_username: yaoyuyang
-github_username:  sunshineyyy
+url: "http://apoorv98.github.io" # the base hostname & protocol for your site
+twitter_username: apoorv_jagtap
+github_username:  apoorv98
 
 # paginate settings
 paginate: 5
