@@ -17,5 +17,3 @@ paginate_path: "/blog/page:num"
 markdown: kramdown
 sass:
     sass_dir: _sass
-
-# header-img: "images/Pensieve2.jpg"
