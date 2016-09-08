@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Git Tutorial"
+title:      "Getting started with git"
 date:       2016-03-16 18:00:00
 author:     "Apoorv Jagtap"
 header-img: "images/git_tut.png"
@@ -14,11 +14,11 @@ header-img: "images/git_tut.png"
 
 ## Commands required for almost every project
 
-* git init - As you might have guessed, this very first command initializes the git repository. Although not compulsory, it is a good idea to add README.md to help others understand the purpose of your project especially if it is open source.
+* `git init` - As you might have guessed, this very first command initializes the git repository. Although not compulsory, it is a good practice to add `README.md` to help others understand the purpose of your project especially if it is open source.
 ---
-* git add - Any new file you want to add to the project you are currently working on will have to be added with this command
+* `git add` - Any new file you want to add to the project you are currently working on will have to be added with this command
 ---
-* git commit -m "Some useful message explaining the update" - This is used when you are ready to commit the changes the made to your files included in the project. It is generally considered ideal to do it after making few updates, especially when updated particular part of the project, before moving to the next part.
+* `git commit -m "Some useful message explaining the update"` - This is used when you are ready to commit the changes the made to your files included in the project. It is generally considered ideal to do it after making few updates, especially when updated particular part of the project, before moving to the next part.
 ---
-* git push origin master - The above changes are only made available in the local repository, but not updated with the master branch. The advantage of this 2 step process to make changes to repository will become clear in the next section which goes over the collaboration benefits by git.
+* `git push origin master` - The above changes are only made available in the local repository, but not updated with the master branch. The advantage of this 2 step process to make changes to repository will become clear in the next section which goes over the collaboration benefits by git.
 --- 
