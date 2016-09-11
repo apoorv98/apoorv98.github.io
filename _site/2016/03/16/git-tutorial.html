@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Apoorv Jagtap's homepage.
-">
+  <title>Getting started with git</title>
+  <meta name="description" content=" As the title of my blog suggests this tutorial is based on my understanding of git and mostly for my reference. For more in-depth information I would like t...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://apoorv98.github.io/about/">
+  <link rel="canonical" href="http://apoorv98.github.io/2016/03/16/git-tutorial.html">
   <link rel="alternate" type="application/rss+xml" title="Apoorv Jagtap Homepage" href="http://apoorv98.github.io/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
@@ -86,34 +85,66 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
 
     <div class="body">
-      <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/')">
+      <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/images/git_tut.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>About</h1>
-                    <hr class="small">
-                    <span class="subheading"></span>
+                <div class="post-heading">
+                    <h1>Getting started with git</h1>
+                    
+                    <span class="meta">Posted by Apoorv Jagtap on March 16, 2016</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+				<p> As the title of my blog suggests this tutorial is based on my understanding of git and mostly for my reference. For more in-depth information I would like to direct you to &lt;a href="https://www.atlassian.com/git/tutorials/" and the official git tutorial on &lt;a href="https://try.github.io/levels/1/challenges/1"</p>
+<p> Of course there are other sources which simplify the learning curve a lot. But honestly, I believe its not that difficult getting started and once on it I would say it's very difficult to live without it. </p>
+<p> This guide will explain the basic commands required almost for every project. I will also add some commands to help with collaboration with other people. I would add commands and tips along the way, so check for any updates. </p>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<h1 id="getting-started-with-basics">Getting started with basics</h1>
 
-		</div>
-	</div>
-</div>
+<h2 id="commands-required-for-almost-every-project">Commands required for almost every project</h2>
+
+<ul>
+  <li>
+    <h2 id="git-init---as-you-might-have-guessed-this-very-first-command-initializes-the-git-repository-although-not-compulsory-it-is-a-good-practice-to-add-readmemd-to-help-others-understand-the-purpose-of-your-project-especially-if-it-is-open-source"><code class="highlighter-rouge">git init</code> - As you might have guessed, this very first command initializes the git repository. Although not compulsory, it is a good practice to add <code class="highlighter-rouge">README.md</code> to help others understand the purpose of your project especially if it is open source.</h2>
+  </li>
+  <li>
+    <h2 id="git-add---any-new-file-you-want-to-add-to-the-project-you-are-currently-working-on-will-have-to-be-added-with-this-command"><code class="highlighter-rouge">git add</code> - Any new file you want to add to the project you are currently working on will have to be added with this command</h2>
+  </li>
+  <li>
+    <h2 id="git-commit--m-some-useful-message-explaining-the-update---this-is-used-when-you-are-ready-to-commit-the-changes-the-made-to-your-files-included-in-the-project-it-is-generally-considered-ideal-to-do-it-after-making-few-updates-especially-when-updated-particular-part-of-the-project-before-moving-to-the-next-part"><code class="highlighter-rouge">git commit -m "Some useful message explaining the update"</code> - This is used when you are ready to commit the changes the made to your files included in the project. It is generally considered ideal to do it after making few updates, especially when updated particular part of the project, before moving to the next part.</h2>
+  </li>
+  <li>
+    <h2 id="git-push-origin-master---the-above-changes-are-only-made-available-in-the-local-repository-but-not-updated-with-the-master-branch-the-advantage-of-this-2-step-process-to-make-changes-to-repository-will-become-clear-in-the-next-section-which-goes-over-the-collaboration-benefits-by-git"><code class="highlighter-rouge">git push origin master</code> - The above changes are only made available in the local repository, but not updated with the master branch. The advantage of this 2 step process to make changes to repository will become clear in the next section which goes over the collaboration benefits by git.</h2>
+  </li>
+</ul>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/03/12/simple-steps-to-get-travis-build-passing-icon-on-your-pebble-project.html" data-toggle="tooltip" data-placement="top" title="Simple steps to add Travis CI to your Pebble project repo on Github">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 
