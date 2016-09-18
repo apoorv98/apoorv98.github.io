@@ -35,10 +35,8 @@ It's true you can add functionality to LATEX by adding packages like additional 
 This will create a table that looks like 
 
 
-```
 	| A | B | C |
 	| 1 | 2 | 3 |
-```
 
 ## Math specific commands
 * \mathbf - Bold face text in math mode
