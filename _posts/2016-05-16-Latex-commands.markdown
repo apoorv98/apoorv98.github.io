@@ -31,7 +31,10 @@ It's true you can add functionality to LATEX by adding packages like additional 
   		\end{tablular}
     \end{center}
   ```
+  
 This will create a table that looks like 
+
+
 ```
 	| A | B | C |
 	| 1 | 2 | 3 |
