@@ -20,22 +20,23 @@ It's true you can add functionality to LATEX by adding packages like additional 
 
 ## Commonly used commands
 * Creating tables
-  ```
-	\begin{center}
-		\begin{tabular}{|c|c|c|}
-		\hline
-		A & B & C 	\\
-		\hline
-		1 & 2 & 3	\\
-		\hline 
-  		\end{tablular}
-    \end{center}
-  ```
+```
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	A & B & C 	\\
+	\hline
+	1 & 2 & 3	\\
+	\hline 
+	\end{tablular}
+\end{center}
+```
   
 This will create a table that looks like 
 
 
 	| A | B | C |
+	|---|---|---|
 	| 1 | 2 | 3 |
 
 ## Math specific commands
