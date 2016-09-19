@@ -1,31 +1,31 @@
 /*!
  * Clean Blog v1.0.0 (http://startbootstrap.com)
  * Copyright 2015 Start Bootstrap
- * Licensed under MIT (https://spdx.org/licenses/MIT)
+ * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-body {
+/*body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
-}
-p {
+}*/
+/*p {
   line-height: 1.5;
   margin: 30px 0;
-}
-p a {
+}*/
+/*p a {
   text-decoration: underline;
-}
+}*/
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica', 'Helvetica Neue', Helvetica, Helvetica, sans-serif;
   font-weight: 800;
 }
-a {
+/*a {
   color: #404040;
 }
 a:hover,
@@ -35,7 +35,7 @@ a:focus {
 a img:hover,
 a img:focus {
   cursor: zoom-in;
-}
+}*/
 blockquote {
   color: #808080;
   font-style: italic;
@@ -181,12 +181,14 @@ hr.small {
   }
 }
 .intro-header .post-heading h1 {
+  text-align: left;
   font-size: 35px;
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
   line-height: 1.1;
   display: block;
+  text-align: left;
 }
 .intro-header .post-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -223,6 +225,7 @@ hr.small {
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 10px;
+  text-align: left;
 }
 .post-preview > a > .post-subtitle {
   margin: 0;
@@ -264,6 +267,7 @@ hr.small {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
 footer {
   padding: 50px 0 65px;
 }
@@ -327,9 +331,9 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 1px;
   border-radius: 0;
