@@ -1,16 +1,18 @@
 ---
 layout:     post
-title:      "LATEX commands encountered so far"
+title:      "Commonly used LATEX commands"
 date:       2016-05-16 19:37:12
 author:     "Apoorv Jagtap"
-header-img: ""
+header-img: "images/latex_banner.png"
 ---
 
 <p> This is the list of LATEX commands which might be helpful. The list includes commands I used during my graduate course. The list was created for my reference so I don't have to keep searching somewhere else in case I forgot one or some of these.</a></p>
 <p> To begin these are not very difficult to get hang of once you start using it regularly for writing assignments, notes, references, resumes, etc. I also have some templates [here](https://github.com/apoorv98/latex-templates) so check them out, and search the internet if this list is not sufficient. I will also link some useful websites down below for reference. </p>
 
-## Commonly used packages
+<h2 class="section-heading"> Commonly used packages</h2>
+
 It's true you can add functionality to LATEX by adding packages like additional fonts, specific math commands, additional text edition features. You need to import them before begining the document. Some of the ones I use on a regular basis are:
+
 * \usepackage{times}
 * \usepackage{fancyhdr}
 * \usepackage{textcomp}
@@ -19,7 +21,9 @@ It's true you can add functionality to LATEX by adding packages like additional 
 * \usepackage{amsmath}
 
 ## Commonly used commands
+
 * Creating tables
+
 ```
 \begin{center}
 	\begin{tabular}{|c|c|c|}

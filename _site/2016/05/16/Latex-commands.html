@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Simple steps to add Travis CI to your Pebble project repo on Github</title>
-  <meta name="description" content="I have been working on a Pebble watch app called CatchOneBus for almost a year. The project’s source code is hosted on Github and I want to add integration w...">
+  <title>Commonly used LATEX commands</title>
+  <meta name="description" content=" This is the list of LATEX commands which might be helpful. The list includes commands I used during my graduate course. The list was created for my referenc...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://apoorv98.github.io/2016/03/12/simple-steps-to-get-travis-build-passing-icon-on-your-pebble-project.html">
+  <link rel="canonical" href="http://apoorv98.github.io/2016/05/16/Latex-commands.html">
   <link rel="alternate" type="application/rss+xml" title="Apoorv Jagtap Homepage" href="http://apoorv98.github.io/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
@@ -86,14 +86,14 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
     <div class="body">
       <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/')">
+<header class="intro-header" style="background-image: url('/images/latex_banner.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Simple steps to add Travis CI to your Pebble project repo on Github</h1>
+                    <h1>Commonly used LATEX commands</h1>
                     
-                    <span class="meta">Posted by Yaoyu Yang on March 12, 2016</span>
+                    <span class="meta">Posted by Apoorv Jagtap on May 16, 2016</span>
                 </div>
             </div>
         </div>
@@ -106,61 +106,59 @@ $(document).on('click','.navbar-collapse.in',function(e) {
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>I have been working on a Pebble watch app called <a href="https://apps.getpebble.com/en_US/application/55331752ac075102f30000a7">CatchOneBus</a> for almost a year. The project’s <a href="https://github.com/sunshineyyy/CatchOneBus">source code</a> is hosted on Github and I want to add integration with <a href="https://travis-ci.org/">Travis CI</a> to have that cool <a href="https://travis-ci.org/sunshineyyy/CatchOneBus"><img src="https://travis-ci.org/sunshineyyy/CatchOneBus.svg?branch=master" alt="Build Status" /></a> icon light up! Even though lighting up the icon is my biggest motivation for now, <a href="https://travis-ci.org/">Travis CI</a> is way more than an icon for sure. Travis CI is a continuous integration service used to build and test software projects hosted at GitHub. Simply speaking, it can run your project on a machine in the cloud as if you are running the project on your local machine and tell you if it can run successfully or not. Using Travis also gives you the confidence that it has been tested on other machines other than your local machine.</p>
+				<p> This is the list of LATEX commands which might be helpful. The list includes commands I used during my graduate course. The list was created for my reference so I don't have to keep searching somewhere else in case I forgot one or some of these.</p>
+<p> To begin these are not very difficult to get hang of once you start using it regularly for writing assignments, notes, references, resumes, etc. I also have some templates [here](https://github.com/apoorv98/latex-templates) so check them out, and search the internet if this list is not sufficient. I will also link some useful websites down below for reference. </p>
 
-<p>Anyway, here are the steps for add Travis CI in your Pebble app project repo:</p>
+<h2 class="section-heading"> Commonly used packages</h2>
+
+<p>It’s true you can add functionality to LATEX by adding packages like additional fonts, specific math commands, additional text edition features. You need to import them before begining the document. Some of the ones I use on a regular basis are:</p>
 
 <ul>
-  <li>
-    <p>Add <a href="https://github.com/integrations/travis-ci">Travis CI integration</a> to your Github by clicking <a href="https://github.com/integrations/travis-ci">Add to Github</a>.</p>
-  </li>
-  <li>
-    <p>Head to your <a href="https://travis-ci.org/profile">Travis CI profile page</a> and flick the repository switch on for your pebble project repo.</p>
-  </li>
-  <li>
-    <p>Add a <code class="highlighter-rouge">.travis.yml</code> into your Github Pebble project repo. You open <a href="https://github.com/sunshineyyy/CatchOneBus/blob/master/.travis.yml">this</a> and copy or directly copy the following code snippet into your <code class="highlighter-rouge">.travis.yml</code> file.</p>
-  </li>
+  <li>\usepackage{times}</li>
+  <li>\usepackage{fancyhdr}</li>
+  <li>\usepackage{textcomp}</li>
+  <li>\usepackage{titling}</li>
+  <li>\usepackage{hyperref}</li>
+  <li>\usepackage{amsmath}</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo: <span class="nb">false
-</span>language: python
-python:
-  - <span class="s2">"2.7"</span>
-
-env:
-  - <span class="nv">PEBBLE_SDK_VERSION</span><span class="o">=</span>3.10.1
-
-before_install:
-  - wget https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/pebble-sdk-4.2.1-linux64.tar.bz2
-  - mkdir -p ~/.pebble-sdk
-  - tar -jxf pebble-sdk-<span class="k">*</span> -C ~/.pebble-sdk
-  - touch ~/.pebble-sdk/ENABLE_ANALYTICS
-  - <span class="nb">export </span><span class="nv">PEBBLE_SDK</span><span class="o">=</span>~/.pebble-sdk/pebble-sdk-<span class="k">*</span>
-  - <span class="nb">export </span><span class="nv">PEBBLE</span><span class="o">=</span><span class="nv">$PEBBLE_SDK</span>/bin/pebble
-
-install:
-  - <span class="nb">pushd</span> <span class="nv">$PEBBLE_SDK</span>
-  - virtualenv --no-site-packages .env
-  - <span class="nb">source</span> .env/bin/activate
-  - pip install -r requirements.txt
-  - deactivate
-  - <span class="nb">popd</span>
-  - <span class="nv">$PEBBLE</span> sdk <span class="nb">set</span>-channel beta
-  - yes | <span class="nv">$PEBBLE</span> sdk install <span class="nv">$PEBBLE_SDK_VERSION</span>
-
-script:
-  - <span class="nv">$PEBBLE</span> build</code></pre></figure>
+<h2 id="commonly-used-commands">Commonly used commands</h2>
 
 <ul>
-  <li>
-    <p>Trigger your first build with a git push.</p>
-  </li>
-  <li>
-    <p>Head over to <a href="https://travis-ci.org/">Travis CI</a>. Once it’s finishing building , the text and icon color will turn to green. Click the <a href="https://travis-ci.org/sunshineyyy/CatchOneBus"><img src="https://travis-ci.org/sunshineyyy/CatchOneBus.svg?branch=master" alt="Build Status" /></a> icon next to the <i class="fa fa-github fa-2x"></i> icon. Select MARKDOWN and copy the code into your README.md file.</p>
-  </li>
-  <li>
-    <p>You should now see the cool <a href="https://travis-ci.org/sunshineyyy/CatchOneBus"><img src="https://travis-ci.org/sunshineyyy/CatchOneBus.svg?branch=master" alt="Build Status" /></a> icon light up in your project repo!</p>
-  </li>
+  <li>Creating tables</li>
+</ul>
+
+<p><code class="highlighter-rouge">
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	A &amp; B &amp; C 	\\
+	\hline
+	1 &amp; 2 &amp; 3	\\
+	\hline 
+	\end{tablular}
+\end{center}
+</code></p>
+
+<p>This will create a table that looks like</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>| A | B | C |
+|---|---|---|
+| 1 | 2 | 3 |
+</code></pre>
+</div>
+
+<h2 id="math-specific-commands">Math specific commands</h2>
+<ul>
+  <li>\mathbf - Bold face text in math mode</li>
+</ul>
+
+<h2 id="useful-links">Useful links:</h2>
+<ul>
+  <li><a href="https://en.wikibooks.org/wiki/LaTeX">WikiBooks</a> - Original resource, might scare at first because of the book in the title. Don’t worry it’s easy to follow. But check the following links for quick reference when you are stuck. There are also other guides around, but this covers all in detail.</li>
+  <li><a href="https://www.sharelatex.com/learn">ShareLATEX</a> - Very helpful especially for beginners.</li>
+  <li><a href="http://tex.stackexchange.com/questions/">http://tex.stackexchange.com/questions/</a> - Community or forum based site, lots of people with experience to answer your questions or make you better in LATEX in general.</li>
+  <li><a href="https://wch.github.io/latexsheet/">Cheat sheet</a> - I wouldn’t recommend this, but hey having a cheatsheet around is not a bad idea.</li>
 </ul>
 
 
@@ -168,10 +166,10 @@ script:
 
                 <ul class="pager">
                     
-                    
-                    <li class="next">
-                        <a href="/2016/03/16/git-tutorial.html" data-toggle="tooltip" data-placement="top" title="Getting started with git">Next Post &rarr;</a>
+                    <li class="previous">
+                        <a href="/2016/03/16/git-tutorial.html" data-toggle="tooltip" data-placement="top" title="Getting started with git">&larr; Previous Post</a>
                     </li>
+                    
                     
                 </ul>
 
@@ -179,8 +177,36 @@ script:
         </div>
     </div>
 </article>
-
 <hr>
+
+ <div class="container">
+        <div class="row">
+        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div id="disqus_thread"></div>
+			<script>
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+				 */
+				/**
+				var disqus_config = function () {
+					this.page.url = "http://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				**/
+				(function() {  // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+				
+					s.src = '//apoorvjagtap.disqus.com/embed.js';
+				
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+		</div>
+	</div>
 
     </div>
 

@@ -6,104 +6,103 @@
 </description>
     <link>http://apoorv98.github.io/</link>
     <atom:link href="http://apoorv98.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Sep 2016 17:45:04 -0400</pubDate>
-    <lastBuildDate>Thu, 08 Sep 2016 17:45:04 -0400</lastBuildDate>
+    <pubDate>Mon, 19 Sep 2016 17:52:45 -0400</pubDate>
+    <lastBuildDate>Mon, 19 Sep 2016 17:52:45 -0400</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Getting started with git</title>
-        <description>&lt;p&gt; As the title of my blog suggests this tutorial is based on my understanding of git and mostly for my reference. For more in-depth information I would like to direct you to &amp;lt;a href=&quot;https://www.atlassian.com/git/tutorials/&quot; and the official git tutorial on &amp;lt;a href=&quot;https://try.github.io/levels/1/challenges/1&quot;&lt;/p&gt;
-&lt;p&gt; Of course there are other sources which simplify the learning curve a lot. But honestly, I believe its not that difficult getting started and once on it I would say it&#39;s very difficult to live without it. &lt;/p&gt;
-&lt;p&gt; This guide will explain the basic commands required almost for every project. I will also add some commands to help with collaboration with other people. I would add commands and tips along the way, so check for any updates. &lt;/p&gt;
+        <title>Commonly used LATEX commands</title>
+        <description>&lt;p&gt; This is the list of LATEX commands which might be helpful. The list includes commands I used during my graduate course. The list was created for my reference so I don&#39;t have to keep searching somewhere else in case I forgot one or some of these.&lt;/p&gt;
+&lt;p&gt; To begin these are not very difficult to get hang of once you start using it regularly for writing assignments, notes, references, resumes, etc. I also have some templates [here](https://github.com/apoorv98/latex-templates) so check them out, and search the internet if this list is not sufficient. I will also link some useful websites down below for reference. &lt;/p&gt;
 
-&lt;h1 id=&quot;getting-started-with-basics&quot;&gt;Getting started with basics&lt;/h1&gt;
+&lt;h2 class=&quot;section-heading&quot;&gt; Commonly used packages&lt;/h2&gt;
 
-&lt;h2 id=&quot;commands-required-for-almost-every-project&quot;&gt;Commands required for almost every project&lt;/h2&gt;
+&lt;p&gt;It’s true you can add functionality to LATEX by adding packages like additional fonts, specific math commands, additional text edition features. You need to import them before begining the document. Some of the ones I use on a regular basis are:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;git-init---as-you-might-have-guessed-this-very-first-command-initializes-the-git-repository-although-not-compulsory-it-is-a-good-practice-to-add-readmemd-to-help-others-understand-the-purpose-of-your-project-especially-if-it-is-open-source&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; - As you might have guessed, this very first command initializes the git repository. Although not compulsory, it is a good practice to add &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt; to help others understand the purpose of your project especially if it is open source.&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;git-add---any-new-file-you-want-to-add-to-the-project-you-are-currently-working-on-will-have-to-be-added-with-this-command&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; - Any new file you want to add to the project you are currently working on will have to be added with this command&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;git-commit--m-some-useful-message-explaining-the-update---this-is-used-when-you-are-ready-to-commit-the-changes-the-made-to-your-files-included-in-the-project-it-is-generally-considered-ideal-to-do-it-after-making-few-updates-especially-when-updated-particular-part-of-the-project-before-moving-to-the-next-part&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Some useful message explaining the update&quot;&lt;/code&gt; - This is used when you are ready to commit the changes the made to your files included in the project. It is generally considered ideal to do it after making few updates, especially when updated particular part of the project, before moving to the next part.&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;git-push-origin-master---the-above-changes-are-only-made-available-in-the-local-repository-but-not-updated-with-the-master-branch-the-advantage-of-this-2-step-process-to-make-changes-to-repository-will-become-clear-in-the-next-section-which-goes-over-the-collaboration-benefits-by-git&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt; - The above changes are only made available in the local repository, but not updated with the master branch. The advantage of this 2 step process to make changes to repository will become clear in the next section which goes over the collaboration benefits by git.&lt;/h2&gt;
-  &lt;/li&gt;
+  &lt;li&gt;\usepackage{times}&lt;/li&gt;
+  &lt;li&gt;\usepackage{fancyhdr}&lt;/li&gt;
+  &lt;li&gt;\usepackage{textcomp}&lt;/li&gt;
+  &lt;li&gt;\usepackage{titling}&lt;/li&gt;
+  &lt;li&gt;\usepackage{hyperref}&lt;/li&gt;
+  &lt;li&gt;\usepackage{amsmath}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;commonly-used-commands&quot;&gt;Commonly used commands&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Creating tables&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	A &amp;amp; B &amp;amp; C 	\\
+	\hline
+	1 &amp;amp; 2 &amp;amp; 3	\\
+	\hline 
+	\end{tablular}
+\end{center}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will create a table that looks like&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| A | B | C |
+|---|---|---|
+| 1 | 2 | 3 |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;math-specific-commands&quot;&gt;Math specific commands&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;\mathbf - Bold face text in math mode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;useful-links&quot;&gt;Useful links:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/LaTeX&quot;&gt;WikiBooks&lt;/a&gt; - Original resource, might scare at first because of the book in the title. Don’t worry it’s easy to follow. But check the following links for quick reference when you are stuck. There are also other guides around, but this covers all in detail.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sharelatex.com/learn&quot;&gt;ShareLATEX&lt;/a&gt; - Very helpful especially for beginners.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tex.stackexchange.com/questions/&quot;&gt;http://tex.stackexchange.com/questions/&lt;/a&gt; - Community or forum based site, lots of people with experience to answer your questions or make you better in LATEX in general.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wch.github.io/latexsheet/&quot;&gt;Cheat sheet&lt;/a&gt; - I wouldn’t recommend this, but hey having a cheatsheet around is not a bad idea.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Wed, 16 Mar 2016 14:00:00 -0400</pubDate>
-        <link>http://apoorv98.github.io/2016/03/16/git-tutorial.html</link>
-        <guid isPermaLink="true">http://apoorv98.github.io/2016/03/16/git-tutorial.html</guid>
+        <pubDate>Mon, 16 May 2016 15:37:12 -0400</pubDate>
+        <link>http://apoorv98.github.io/2016/05/16/Latex-commands.html</link>
+        <guid isPermaLink="true">http://apoorv98.github.io/2016/05/16/Latex-commands.html</guid>
         
         
       </item>
     
       <item>
-        <title>Simple steps to add Travis CI to your Pebble project repo on Github</title>
-        <description>&lt;p&gt;I have been working on a Pebble watch app called &lt;a href=&quot;https://apps.getpebble.com/en_US/application/55331752ac075102f30000a7&quot;&gt;CatchOneBus&lt;/a&gt; for almost a year. The project’s &lt;a href=&quot;https://github.com/sunshineyyy/CatchOneBus&quot;&gt;source code&lt;/a&gt; is hosted on Github and I want to add integration with &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt; to have that cool &lt;a href=&quot;https://travis-ci.org/sunshineyyy/CatchOneBus&quot;&gt;&lt;img src=&quot;https://travis-ci.org/sunshineyyy/CatchOneBus.svg?branch=master&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt; icon light up! Even though lighting up the icon is my biggest motivation for now, &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt; is way more than an icon for sure. Travis CI is a continuous integration service used to build and test software projects hosted at GitHub. Simply speaking, it can run your project on a machine in the cloud as if you are running the project on your local machine and tell you if it can run successfully or not. Using Travis also gives you the confidence that it has been tested on other machines other than your local machine.&lt;/p&gt;
+        <title>Getting started with git</title>
+        <description>&lt;p&gt; As the title of my blog suggests this tutorial is based on my understanding of git and mostly for my reference. For more in-depth information I would like to direct you to &lt;a href=&quot;https://www.atlassian.com/git/tutorials/&quot;&gt;www.atlassian.com/git/tutorials/&lt;/a&gt; and the official git tutorial on &lt;a href=&quot;https://try.github.io/levels/1/challenges/1&quot;&gt;try.github.io/levels/1/challenges/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Of course there are other sources which simplify the learning curve a lot. But honestly, I believe its not that difficult getting started and once on it I would say it&#39;s very difficult to live without it. &lt;/p&gt;
+&lt;p&gt; This guide will explain the basic commands required almost for every project. I will also add some commands to help with collaboration with other people. I would add commands and tips along the way, so check for any updates. &lt;/p&gt;
 
-&lt;p&gt;Anyway, here are the steps for add Travis CI in your Pebble app project repo:&lt;/p&gt;
+&lt;h2 class=&quot;section-heading&quot;&gt;Getting started with basics&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add &lt;a href=&quot;https://github.com/integrations/travis-ci&quot;&gt;Travis CI integration&lt;/a&gt; to your Github by clicking &lt;a href=&quot;https://github.com/integrations/travis-ci&quot;&gt;Add to Github&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Head to your &lt;a href=&quot;https://travis-ci.org/profile&quot;&gt;Travis CI profile page&lt;/a&gt; and flick the repository switch on for your pebble project repo.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add a &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt; into your Github Pebble project repo. You open &lt;a href=&quot;https://github.com/sunshineyyy/CatchOneBus/blob/master/.travis.yml&quot;&gt;this&lt;/a&gt; and copy or directly copy the following code snippet into your &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt; file.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo: &lt;span class=&quot;nb&quot;&gt;false
-&lt;/span&gt;language: python
-python:
-  - &lt;span class=&quot;s2&quot;&gt;&quot;2.7&quot;&lt;/span&gt;
-
-env:
-  - &lt;span class=&quot;nv&quot;&gt;PEBBLE_SDK_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3.10.1
-
-before_install:
-  - wget https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/pebble-sdk-4.2.1-linux64.tar.bz2
-  - mkdir -p ~/.pebble-sdk
-  - tar -jxf pebble-sdk-&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; -C ~/.pebble-sdk
-  - touch ~/.pebble-sdk/ENABLE_ANALYTICS
-  - &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PEBBLE_SDK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.pebble-sdk/pebble-sdk-&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-  - &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PEBBLE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PEBBLE_SDK&lt;/span&gt;/bin/pebble
-
-install:
-  - &lt;span class=&quot;nb&quot;&gt;pushd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PEBBLE_SDK&lt;/span&gt;
-  - virtualenv --no-site-packages .env
-  - &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; .env/bin/activate
-  - pip install -r requirements.txt
-  - deactivate
-  - &lt;span class=&quot;nb&quot;&gt;popd&lt;/span&gt;
-  - &lt;span class=&quot;nv&quot;&gt;$PEBBLE&lt;/span&gt; sdk &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-channel beta
-  - yes | &lt;span class=&quot;nv&quot;&gt;$PEBBLE&lt;/span&gt; sdk install &lt;span class=&quot;nv&quot;&gt;$PEBBLE_SDK_VERSION&lt;/span&gt;
-
-script:
-  - &lt;span class=&quot;nv&quot;&gt;$PEBBLE&lt;/span&gt; build&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3&gt;Commands required for almost every project&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Trigger your first build with a git push.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; - As you might have guessed, this very first command initializes the git repository. Although not compulsory, it is a good practice to add &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt; to help others understand the purpose of your project especially if it is open source.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Head over to &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt;. Once it’s finishing building , the text and icon color will turn to green. Click the &lt;a href=&quot;https://travis-ci.org/sunshineyyy/CatchOneBus&quot;&gt;&lt;img src=&quot;https://travis-ci.org/sunshineyyy/CatchOneBus.svg?branch=master&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt; icon next to the &lt;i class=&quot;fa fa-github fa-2x&quot;&gt;&lt;/i&gt; icon. Select MARKDOWN and copy the code into your README.md file.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; - Any new file you want to add to the project you are currently working on will have to be added with this command&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;You should now see the cool &lt;a href=&quot;https://travis-ci.org/sunshineyyy/CatchOneBus&quot;&gt;&lt;img src=&quot;https://travis-ci.org/sunshineyyy/CatchOneBus.svg?branch=master&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt; icon light up in your project repo!&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Some useful message explaining the update&quot;&lt;/code&gt; - This is used when you are ready to commit the changes the made to your files included in the project. It is generally considered ideal to do it after making few updates, especially when updated particular part of the project, before moving to the next part.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt; - The above changes are only made available in the local repository, but not updated with the master branch. The advantage of this 2 step process to make changes to repository will become clear in the next section which goes over the collaboration benefits by git.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
 </description>
-        <pubDate>Sat, 12 Mar 2016 07:00:00 -0500</pubDate>
-        <link>http://apoorv98.github.io/2016/03/12/simple-steps-to-get-travis-build-passing-icon-on-your-pebble-project.html</link>
-        <guid isPermaLink="true">http://apoorv98.github.io/2016/03/12/simple-steps-to-get-travis-build-passing-icon-on-your-pebble-project.html</guid>
+        <pubDate>Wed, 16 Mar 2016 14:00:00 -0400</pubDate>
+        <link>http://apoorv98.github.io/2016/03/16/git-tutorial.html</link>
+        <guid isPermaLink="true">http://apoorv98.github.io/2016/03/16/git-tutorial.html</guid>
         
         
       </item>
