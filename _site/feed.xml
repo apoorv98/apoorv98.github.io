@@ -4,106 +4,84 @@
     <title>Apoorv Jagtap Homepage</title>
     <description>Apoorv Jagtap&#39;s homepage.
 </description>
-    <link>http://apoorv98.github.io/</link>
-    <atom:link href="http://apoorv98.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Sep 2016 18:43:35 -0400</pubDate>
-    <lastBuildDate>Mon, 19 Sep 2016 18:43:35 -0400</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <link>http://apoorv98.github.io//</link>
+    <atom:link href="http://apoorv98.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 13 Feb 2018 11:34:34 +0530</pubDate>
+    <lastBuildDate>Tue, 13 Feb 2018 11:34:34 +0530</lastBuildDate>
+    <generator>Jekyll v3.0.3</generator>
     
       <item>
-        <title>Commonly used LATEX commands</title>
-        <description>&lt;p&gt; This is the list of LATEX commands which might be helpful. The list includes commands I used during my graduate course. The list was created for my reference so I don&#39;t have to keep searching somewhere else in case I forgot one or some of these.&lt;/p&gt;
-&lt;p&gt; To begin these are not very difficult to get hang of once you start using it regularly for writing assignments, notes, references, resumes, etc. I also have some templates [here](https://github.com/apoorv98/latex-templates) so check them out, and search the internet if this list is not sufficient. I will also link some useful websites down below for reference. &lt;/p&gt;
+        <title>Fastai Course Summary: Lesson 1</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;There is &lt;a href=&quot;&quot;&gt;Lesson 0&lt;/a&gt;, please check it out first so you don’t miss anything.
+There I have mentioned some important links and purpose of this course.
+Without further ado let’s get into the content for this post.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt; Commonly used packages&lt;/h2&gt;
+&lt;p&gt;Use the links below to jump to section you need more information about:&lt;/p&gt;
 
-&lt;p&gt;It’s true you can add functionality to LATEX by adding packages like additional fonts, specific math commands, additional text edition features. You need to import them before begining the document. Some of the ones I use on a regular basis are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#software-and-hardware-setup&quot;&gt;Software and Hardware Setup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#kaggle-cats-vs-dogs-data-setup&quot;&gt;Kaggle Cats vs Dogs data setup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pre-trained-model-and-finetuning&quot;&gt;Pre-trained model and finetuning&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;\usepackage{times}&lt;/li&gt;
-  &lt;li&gt;\usepackage{fancyhdr}&lt;/li&gt;
-  &lt;li&gt;\usepackage{textcomp}&lt;/li&gt;
-  &lt;li&gt;\usepackage{titling}&lt;/li&gt;
-  &lt;li&gt;\usepackage{hyperref}&lt;/li&gt;
-  &lt;li&gt;\usepackage{amsmath}&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;software-and-hardware-setup&quot;&gt;Software and Hardware Setup&lt;/h3&gt;
+&lt;p&gt;It is no surprise that we need programming languages and frameworks to write the necessary code along with supporting hardware.&lt;/p&gt;
 
-&lt;h2 id=&quot;commonly-used-commands&quot;&gt;Commonly used commands&lt;/h2&gt;
+&lt;p&gt;Lets begin with hardware, it is recommended to use a system with GPU access in general for deep learning. Although, from my experience it is not a hard requirement if you (like me) are only going to test on small dataset. In fact, I would highly recommend using this approach first to get a hang of the work flow, concepts and when your script is finally complete are ready to run on entire dataset switch to AWS. Speaking of AWS, Jeremy has provided another video to help with the process, linked &lt;a href=&quot;https://www.youtube.com/watch?v=8rjRfW4JM2I&quot;&gt;here&lt;/a&gt;. I would also recommend reading the &lt;a href=&quot;http://wiki.fast.ai/index.php/AWS_install&quot;&gt;Course Wiki for AWS setup&lt;/a&gt; as it lists common problems reported on forum and the solution to handle the issues. If you face any more problems with this part use this &lt;a href=&quot;http://forums.fast.ai/&quot;&gt;forum&lt;/a&gt; to ask any question and there will be people to help out.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Creating tables&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;For the software part, I would recommend installing &lt;a href=&quot;https://docs.continuum.io/anaconda/install&quot;&gt;Anaconda&lt;/a&gt; especially for a person with little software knowledge as it installs all the required components to get started. For more advanced user, basically we need to install &lt;a href=&quot;&quot;&gt;Numpy&lt;/a&gt;, python package for matrix computation, &lt;a href=&quot;&quot;&gt;Keras&lt;/a&gt;, deep learning library for Python and &lt;a href=&quot;&quot;&gt;Jupyter notebook&lt;/a&gt;, if you want to follow exactly as demonstrated in the videos. Apart from these, there are course specific files required which can be found on &lt;a href=&quot;&quot;&gt;github repo&lt;/a&gt; of the course. For pre-trained model and weights, use this &lt;a href=&quot;&quot;&gt;link&lt;/a&gt;. I would recommend cloning the repo and updating it as required. More details on how all the software packages and framework work are explained in the video.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-\begin{center}
-	\begin{tabular}{|c|c|c|}
-	\hline
-	A &amp;amp; B &amp;amp; C 	\\
-	\hline
-	1 &amp;amp; 2 &amp;amp; 3	\\
-	\hline 
-	\end{tablular}
-\end{center}
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;kaggle-cats-vs-dogs-data-setup&quot;&gt;Kaggle Cats vs Dogs data setup&lt;/h3&gt;
+&lt;p&gt;For this lesson, we will be using &lt;a href=&quot;&quot;&gt;Kaggle’s Dogs Vs Cats dataset&lt;/a&gt; to classify images. Simply download the data from the link provided and use the provided notebook to follow the course. Even before watching the video, I would recommend going through &lt;a href=&quot;http://wiki.fast.ai/index.php/How_to_use_the_Provided_Notebooks&quot;&gt;Using provided notebook&lt;/a&gt; to get most out of the course. Personally, I watched the video once, tried to implement the code myself (going back to provided notebook once I got stuck) and watched the video again to better understand the concepts.&lt;/p&gt;
 
-&lt;p&gt;This will create a table that looks like&lt;/p&gt;
+&lt;h3 id=&quot;pre-trained-model-and-finetuning&quot;&gt;Pre-trained model and finetuning&lt;/h3&gt;
+&lt;p&gt;Now that the data is ready, we need a model which uses some algorithm to learn from the data and output the results we want, this is basically what we will be doing in deep learning.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| A | B | C |
-|---|---|---|
-| 1 | 2 | 3 |
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;Here we are using pre-trained model call VGG16. Why? VGG16 is a convolutional neural network model trained on Imagenet Dataset. &lt;strong&gt;Remember&lt;/strong&gt;: we generally use convolutional type neural network when dealing with images. Imagenet dataset contains thousands of images and we can leverage the training performed here be improve the accuracy of our results. The only caveat is VGG16 was designed to output 1000 categories (and not just cats and dogs), since there were 1000 categories on Imagenet.&lt;/p&gt;
 
-&lt;h2 id=&quot;math-specific-commands&quot;&gt;Math specific commands&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;\mathbf - Bold face text in math mode&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;This is where the concept of finetuning comes in. To make VGG16 output just 2 categories (as required in our case), we provide the model with just two categories as input (this is done during the data setup where we put the images in two folders labeled cats and dogs in sample, train and valid directories).&lt;/p&gt;
 
-&lt;h2 id=&quot;useful-links&quot;&gt;Useful links:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/LaTeX&quot;&gt;WikiBooks&lt;/a&gt; - Original resource, might scare at first because of the book in the title. Don’t worry it’s easy to follow. But check the following links for quick reference when you are stuck. There are also other guides around, but this covers all in detail.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.sharelatex.com/learn&quot;&gt;ShareLATEX&lt;/a&gt; - Very helpful especially for beginners.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tex.stackexchange.com/questions/&quot;&gt;http://tex.stackexchange.com/questions/&lt;/a&gt; - Community or forum based site, lots of people with experience to answer your questions or make you better in LATEX in general.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wch.github.io/latexsheet/&quot;&gt;Cheat sheet&lt;/a&gt; - I wouldn’t recommend this, but hey having a cheatsheet around is not a bad idea.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Snapshot of the code used to obtain results is given below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/lesson1_code.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The images are given in batches, as is normally the case in deep learning. You can try changing the nb_epoch to see if the accuracy increase any further. This model gives more than 90% accuracy with just these lines of code. Further details of underlying code is given in further lessons or inquisite users can explore the util.py and vgg16.py files.&lt;/p&gt;
+
+&lt;p&gt;Next lesson will continue with these basic ideas and expand them further, so read along &lt;a href=&quot;&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 16 May 2016 15:37:12 -0400</pubDate>
-        <link>http://apoorv98.github.io/2016/05/16/Latex-commands.html</link>
-        <guid isPermaLink="true">http://apoorv98.github.io/2016/05/16/Latex-commands.html</guid>
+        <pubDate>Thu, 23 Jun 2016 23:30:00 +0530</pubDate>
+        <link>http://apoorv98.github.io//2016/06/23/lesson1-notes.html</link>
+        <guid isPermaLink="true">http://apoorv98.github.io//2016/06/23/lesson1-notes.html</guid>
         
         
       </item>
     
       <item>
-        <title>Getting started with git</title>
-        <description>&lt;p&gt; As the title of my blog suggests this tutorial is based on my understanding of git and mostly for my reference. For more in-depth information I would like to direct you to &lt;a href=&quot;https://www.atlassian.com/git/tutorials/&quot;&gt;www.atlassian.com/git/tutorials/&lt;/a&gt; and the official git tutorial on &lt;a href=&quot;https://try.github.io/levels/1/challenges/1&quot;&gt;try.github.io/levels/1/challenges/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; Of course there are other sources which simplify the learning curve a lot. But honestly, I believe its not that difficult getting started and once on it I would say it&#39;s very difficult to live without it. &lt;/p&gt;
-&lt;p&gt; This guide will explain the basic commands required almost for every project. I will also add some commands to help with collaboration with other people. I would add commands and tips along the way, so check for any updates. &lt;/p&gt;
+        <title>Fastai Course Summary: Lesson 0</title>
+        <description>&lt;p&gt;Since this the first post in the series, I would commence with recommending this course if you haven’t already taken it (and if you have already began write a comment down below to work on group projects).&lt;/p&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt;Getting started with basics&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt; : This course doesnot take a traditional approach and assumes some background knowledge. But the highlights of the course include practical approach from day 1 with all course materials available for free, &lt;a href=&quot;http://wiki.fast.ai/index.php/Course_notes&quot;&gt;course notes&lt;/a&gt;, &lt;a href=&quot;https://github.com/fastai/courses/tree/master/deeplearning1&quot;&gt;course files&lt;/a&gt; and really helpful &lt;a href=&quot;http://forums.fast.ai/&quot;&gt;forum&lt;/a&gt; where even the course instructors participate regularly.&lt;/p&gt;
 
-&lt;h3&gt;Commands required for almost every project&lt;/h3&gt;
+&lt;p&gt;With that out of the way, we begin with &lt;a href=&quot;http://course.fast.ai/lessons/lesson0.html&quot;&gt;Lesson 0&lt;/a&gt; of &lt;a href=&quot;http://course.fast.ai/lessons/lessons.html&quot;&gt;Deep Learning for Coder - Part 1&lt;/a&gt;, where Jeremy gives some idea of the state of machine learning and its potential impact. He also gives his introduction and &lt;a href=&quot;https://www.enlitic.com/&quot;&gt;medical startup&lt;/a&gt; he built around deep learning network ideas. If that’s not inspiration enough then I don’t know what is.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; - As you might have guessed, this very first command initializes the git repository. Although not compulsory, it is a good practice to add &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt; to help others understand the purpose of your project especially if it is open source.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; - Any new file you want to add to the project you are currently working on will have to be added with this command&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Some useful message explaining the update&quot;&lt;/code&gt; - This is used when you are ready to commit the changes the made to your files included in the project. It is generally considered ideal to do it after making few updates, especially when updated particular part of the project, before moving to the next part.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt; - The above changes are only made available in the local repository, but not updated with the master branch. The advantage of this 2 step process to make changes to repository will become clear in the next section which goes over the collaboration benefits by git.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Anyways, the video continues explaining about neural networks which are basically a stack of layers learning something (which will become clear later) from the input provided in the form of images, text or any data. With this basic concept, Jeremy shows the famous approach used to deal with MNIST dataset, to visually see the differnt learnings of each layer from the image of handwritten digit passed as input.&lt;/p&gt;
 
+&lt;p&gt;Convolutional neural nets are commonly used in neural networks for dealing with images. To illustrate their working, he uses a simple matrix and an image of handwritten digit 7. Now he correlates these to matrices to output the results as shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://apoorv98.github.io//images/lesson0_img7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This exact approach is used in conv nets to detect edges, and many such matrices are employed for detecting other features (example: corners, curves), and deep layers are even able to detect objects as seen later in the course. You can play around with the matrices and see the different results. Now, instead of handcrafting these matrices they are randomly initialized and the goal is to update them to get the predicted output as close to the actual output. These matrices are called Kernels or filters and more information can be found on &lt;a href=&quot;http://wiki.fast.ai/index.php/Lesson_0&quot;&gt;Lesson Wiki&lt;/a&gt;. A nice example with simple equation of a line is presented and solved with the help of neural network. The details are skipped here as I would want everyone to watch the video to get a better hang of what we will be learning and doing in this course.&lt;/p&gt;
+
+&lt;p&gt;This is a short video to kick things off, next lesson would be about setting up environment on your PC or AWS instance as detailed in the &lt;a href=&quot;link coming soon&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 16 Mar 2016 14:00:00 -0400</pubDate>
-        <link>http://apoorv98.github.io/2016/03/16/git-tutorial.html</link>
-        <guid isPermaLink="true">http://apoorv98.github.io/2016/03/16/git-tutorial.html</guid>
+        <pubDate>Thu, 16 Jun 2016 23:30:00 +0530</pubDate>
+        <link>http://apoorv98.github.io//deeplearning/2016/06/16/lesson0-notes.html</link>
+        <guid isPermaLink="true">http://apoorv98.github.io//deeplearning/2016/06/16/lesson0-notes.html</guid>
         
+        
+        <category>deeplearning</category>
         
       </item>
     

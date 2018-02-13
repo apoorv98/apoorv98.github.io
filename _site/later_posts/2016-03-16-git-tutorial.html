@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Getting started with git</title>
+  <meta name="description" content="Apoorv Jagtap's homepage.
+">
+
+  <link rel="stylesheet" href="/apoorv98.github.io//css/main.css">
+  <link rel="canonical" href="http://apoorv98.github.io/apoorv98.github.io//later_posts/2016-03-16-git-tutorial.html">
+  <link rel="alternate" type="application/rss+xml" title="Apoorv Jagtap Homepage" href="http://apoorv98.github.io/apoorv98.github.io//feed.xml" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/apoorv98.github.io//css/clean-blog.css">
+  <!-- Pygments Github CSS -->
+  <link rel="stylesheet" href="/apoorv98.github.io//css/syntax.css">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apoorv98.github.io//public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+</head>
+
+
+  <body>
+
+    <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <!-- <div class="navbar-collapse collapse">
+    <div class="container">
+      <a href="/" id="logo">Apoorv Jagtap</a>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div> -->
+  <!-- Fixed navbar -->
+   <div class="navbar navbar-invserse navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/">Apoorv Jagtap</a>
+       </div>
+       <div class="navbar-collapse collapse" style="background:black">
+         <ul class="nav navbar-nav navbar-right">
+           <!-- <li class="active"><a href="/">Home</a></li> -->
+           <li><a href="/">Home</a></li>
+           <!-- <li><a href="/blog">Blog</a></li> -->
+           <li><a href="/research">Projects</a></li>
+<!--                <li class="divider"></li>
+               <li class="dropdown-header">Portfolio</li>
+               <li><a href="#">Portfolio 1</a></li>
+               <li><a href="#">Portfolio 2</a></li> -->
+           <!-- <li><a href="/referral">Referral</a></li> -->
+           <li><a href="/contact">Contact</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </div>
+</header>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script> 
+$(document).on('click','.navbar-collapse.in',function(e) {
+
+    if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+        $(this).collapse('hide');
+    }
+
+});
+</script>
+
+
+    <div class="body">
+      <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/apoorv98.github.io//images/git_banner.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Getting started with git</h1>
+                    
+                    <span class="meta">Posted by Apoorv Jagtap on March 16, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p> As the title of my blog suggests this tutorial is based on my understanding of git and mostly for my reference. For more in-depth information I would like to direct you to <a href="https://www.atlassian.com/git/tutorials/">www.atlassian.com/git/tutorials/</a> and the official git tutorial on <a href="https://try.github.io/levels/1/challenges/1">try.github.io/levels/1/challenges/1</a></p>
+<p> Of course there are other sources which simplify the learning curve a lot. But honestly, I believe its not that difficult getting started and once on it I would say it's very difficult to live without it. </p>
+<p> This guide will explain the basic commands required almost for every project. I will also add some commands to help with collaboration with other people. I would add commands and tips along the way, so check for any updates. </p>
+
+<h2 class="section-heading">Getting started with basics</h2>
+
+<h3>Commands required for almost every project</h3>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">git init</code> - As you might have guessed, this very first command initializes the git repository. Although not compulsory, it is a good practice to add <code class="highlighter-rouge">README.md</code> to help others understand the purpose of your project especially if it is open source.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git add</code> - Any new file you want to add to the project you are currently working on will have to be added with this command</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git commit -m "Some useful message explaining the update"</code> - This is used when you are ready to commit the changes the made to your files included in the project. It is generally considered ideal to do it after making few updates, especially when updated particular part of the project, before moving to the next part.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git push origin master</code> - The above changes are only made available in the local repository, but not updated with the master branch. The advantage of this 2 step process to make changes to repository will become clear in the next section which goes over the collaboration benefits by git.</p>
+  </li>
+</ul>
+
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+<hr>
+
+ <div class="container">
+        <div class="row">
+        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div id="disqus_thread"></div>
+			<script>
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+				 */
+				/**
+				var disqus_config = function () {
+					this.page.url = "https://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				**/
+				(function() {  // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+				
+					s.src = '//apoorvjagtap.disqus.com/embed.js';
+				
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+		</div>
+	</div>
+
+    </div>
+
+    <footer class="footer">
+  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-text pull-left">
+        <p>© 2017 Apoorv Jagtap</p>
+      </div>
+      <!--<div class="navbar-text pull-left">
+ &copy; 2014 - 2015 <a href="http://apoorv98.github.io/">Apoorv Jagtap</a>All Rights Reserved.
+ 		</div> -->
+      <div class="navbar-text pull-right">
+      <ul>
+        <li><a href="https://www.facebook.com/apoorv.jagtap"><i style='margin-right:4px' class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="https://twitter.com/apoorv_jagtap"><i style='margin-right:4px' class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/apoorv-jagtap-882a3683"><i style='margin-right:4px' class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://github.com/apoorv98"><i class="fa fa-github fa-2x"></i></a></li>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-74496807-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</footer>
+
+
+  </body>
+
+</html>

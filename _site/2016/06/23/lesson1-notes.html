@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fastai Course Summary: Lesson 1</title>
+  <meta name="description" content="  There is Lesson 0, please check it out first so you don’t miss anything.There I have mentioned some important links and purpose of this course.Without furt...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://apoorv98.github.io//2016/06/23/lesson1-notes.html">
+  <link rel="alternate" type="application/rss+xml" title="Apoorv Jagtap Homepage" href="http://apoorv98.github.io//feed.xml" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/clean-blog.css">
+  <!-- Pygments Github CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+</head>
+
+
+  <body>
+
+    <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <!-- <div class="navbar-collapse collapse">
+    <div class="container">
+      <a href="/" id="logo">Apoorv Jagtap</a>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div> -->
+  <!-- Fixed navbar -->
+   <div class="navbar navbar-invserse navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/">Apoorv Jagtap</a>
+       </div>
+       <div class="navbar-collapse collapse" style="background:black">
+         <ul class="nav navbar-nav navbar-right">
+           <!-- <li class="active"><a href="/">Home</a></li> -->
+           <li><a href="/">Home</a></li>
+           <!-- <li><a href="/blog">Blog</a></li> -->
+           <li><a href="/research">Projects</a></li>
+<!--                <li class="divider"></li>
+               <li class="dropdown-header">Portfolio</li>
+               <li><a href="#">Portfolio 1</a></li>
+               <li><a href="#">Portfolio 2</a></li> -->
+           <!-- <li><a href="/referral">Referral</a></li> -->
+           <li><a href="/contact">Contact</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </div>
+</header>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script> 
+$(document).on('click','.navbar-collapse.in',function(e) {
+
+    if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+        $(this).collapse('hide');
+    }
+
+});
+</script>
+
+
+    <div class="body">
+      <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/images/fastai.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Fastai Course Summary: Lesson 1</h1>
+                    
+                    <span class="meta">Posted by Apoorv Jagtap on June 23, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<blockquote>
+  <p>There is <a href="">Lesson 0</a>, please check it out first so you don’t miss anything.
+There I have mentioned some important links and purpose of this course.
+Without further ado let’s get into the content for this post.</p>
+</blockquote>
+
+<p>Use the links below to jump to section you need more information about:</p>
+
+<ol>
+  <li><a href="#software-and-hardware-setup">Software and Hardware Setup</a></li>
+  <li><a href="#kaggle-cats-vs-dogs-data-setup">Kaggle Cats vs Dogs data setup</a></li>
+  <li><a href="#pre-trained-model-and-finetuning">Pre-trained model and finetuning</a></li>
+</ol>
+
+<h3 id="software-and-hardware-setup">Software and Hardware Setup</h3>
+<p>It is no surprise that we need programming languages and frameworks to write the necessary code along with supporting hardware.</p>
+
+<p>Lets begin with hardware, it is recommended to use a system with GPU access in general for deep learning. Although, from my experience it is not a hard requirement if you (like me) are only going to test on small dataset. In fact, I would highly recommend using this approach first to get a hang of the work flow, concepts and when your script is finally complete are ready to run on entire dataset switch to AWS. Speaking of AWS, Jeremy has provided another video to help with the process, linked <a href="https://www.youtube.com/watch?v=8rjRfW4JM2I">here</a>. I would also recommend reading the <a href="http://wiki.fast.ai/index.php/AWS_install">Course Wiki for AWS setup</a> as it lists common problems reported on forum and the solution to handle the issues. If you face any more problems with this part use this <a href="http://forums.fast.ai/">forum</a> to ask any question and there will be people to help out.</p>
+
+<p>For the software part, I would recommend installing <a href="https://docs.continuum.io/anaconda/install">Anaconda</a> especially for a person with little software knowledge as it installs all the required components to get started. For more advanced user, basically we need to install <a href="">Numpy</a>, python package for matrix computation, <a href="">Keras</a>, deep learning library for Python and <a href="">Jupyter notebook</a>, if you want to follow exactly as demonstrated in the videos. Apart from these, there are course specific files required which can be found on <a href="">github repo</a> of the course. For pre-trained model and weights, use this <a href="">link</a>. I would recommend cloning the repo and updating it as required. More details on how all the software packages and framework work are explained in the video.</p>
+
+<h3 id="kaggle-cats-vs-dogs-data-setup">Kaggle Cats vs Dogs data setup</h3>
+<p>For this lesson, we will be using <a href="">Kaggle’s Dogs Vs Cats dataset</a> to classify images. Simply download the data from the link provided and use the provided notebook to follow the course. Even before watching the video, I would recommend going through <a href="http://wiki.fast.ai/index.php/How_to_use_the_Provided_Notebooks">Using provided notebook</a> to get most out of the course. Personally, I watched the video once, tried to implement the code myself (going back to provided notebook once I got stuck) and watched the video again to better understand the concepts.</p>
+
+<h3 id="pre-trained-model-and-finetuning">Pre-trained model and finetuning</h3>
+<p>Now that the data is ready, we need a model which uses some algorithm to learn from the data and output the results we want, this is basically what we will be doing in deep learning.</p>
+
+<p>Here we are using pre-trained model call VGG16. Why? VGG16 is a convolutional neural network model trained on Imagenet Dataset. <strong>Remember</strong>: we generally use convolutional type neural network when dealing with images. Imagenet dataset contains thousands of images and we can leverage the training performed here be improve the accuracy of our results. The only caveat is VGG16 was designed to output 1000 categories (and not just cats and dogs), since there were 1000 categories on Imagenet.</p>
+
+<p>This is where the concept of finetuning comes in. To make VGG16 output just 2 categories (as required in our case), we provide the model with just two categories as input (this is done during the data setup where we put the images in two folders labeled cats and dogs in sample, train and valid directories).</p>
+
+<p>Snapshot of the code used to obtain results is given below:</p>
+
+<p><img src="../images/lesson1_code.png" alt="" /></p>
+
+<p>The images are given in batches, as is normally the case in deep learning. You can try changing the nb_epoch to see if the accuracy increase any further. This model gives more than 90% accuracy with just these lines of code. Further details of underlying code is given in further lessons or inquisite users can explore the util.py and vgg16.py files.</p>
+
+<p>Next lesson will continue with these basic ideas and expand them further, so read along <a href="">here</a>.</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/deeplearning/2016/06/16/lesson0-notes.html" data-toggle="tooltip" data-placement="top" title="Fastai Course Summary: Lesson 0">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+<hr>
+
+ <div class="container">
+        <div class="row">
+        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div id="disqus_thread"></div>
+			<script>
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+				 */
+				/**
+				var disqus_config = function () {
+					this.page.url = "https://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				**/
+				(function() {  // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+				
+					s.src = '//apoorvjagtap.disqus.com/embed.js';
+				
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+		</div>
+	</div>
+
+    </div>
+
+    <footer class="footer">
+  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-text pull-left">
+        <p>© 2018 Apoorv Jagtap</p>
+      </div>
+      <!--<div class="navbar-text pull-left">
+ &copy; 2014 - 2015 <a href="http://apoorv98.github.io/">Apoorv Jagtap</a>All Rights Reserved.
+ 		</div> -->
+      <div class="navbar-text pull-right">
+      <ul>
+        <li><a href="https://www.facebook.com/apoorv.jagtap"><i style='margin-right:4px' class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="https://twitter.com/apoorv_jagtap"><i style='margin-right:4px' class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/apoorv-jagtap-882a3683"><i style='margin-right:4px' class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://github.com/apoorv98"><i class="fa fa-github fa-2x"></i></a></li>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-74496807-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</footer>
+
+
+  </body>
+
+</html>

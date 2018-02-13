@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Commonly used LATEX commands</title>
+  <meta name="description" content="Apoorv Jagtap's homepage.
+">
+
+  <link rel="stylesheet" href="/apoorv98.github.io//css/main.css">
+  <link rel="canonical" href="http://apoorv98.github.io/apoorv98.github.io//later_posts/2016-05-16-Latex-commands.html">
+  <link rel="alternate" type="application/rss+xml" title="Apoorv Jagtap Homepage" href="http://apoorv98.github.io/apoorv98.github.io//feed.xml" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/apoorv98.github.io//css/clean-blog.css">
+  <!-- Pygments Github CSS -->
+  <link rel="stylesheet" href="/apoorv98.github.io//css/syntax.css">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apoorv98.github.io//public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+</head>
+
+
+  <body>
+
+    <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <!-- <div class="navbar-collapse collapse">
+    <div class="container">
+      <a href="/" id="logo">Apoorv Jagtap</a>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div> -->
+  <!-- Fixed navbar -->
+   <div class="navbar navbar-invserse navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/">Apoorv Jagtap</a>
+       </div>
+       <div class="navbar-collapse collapse" style="background:black">
+         <ul class="nav navbar-nav navbar-right">
+           <!-- <li class="active"><a href="/">Home</a></li> -->
+           <li><a href="/">Home</a></li>
+           <!-- <li><a href="/blog">Blog</a></li> -->
+           <li><a href="/research">Projects</a></li>
+<!--                <li class="divider"></li>
+               <li class="dropdown-header">Portfolio</li>
+               <li><a href="#">Portfolio 1</a></li>
+               <li><a href="#">Portfolio 2</a></li> -->
+           <!-- <li><a href="/referral">Referral</a></li> -->
+           <li><a href="/contact">Contact</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </div>
+</header>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script> 
+$(document).on('click','.navbar-collapse.in',function(e) {
+
+    if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+        $(this).collapse('hide');
+    }
+
+});
+</script>
+
+
+    <div class="body">
+      <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/apoorv98.github.io//images/latex_banner.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Commonly used LATEX commands</h1>
+                    
+                    <span class="meta">Posted by Apoorv Jagtap on May 17, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p> This is the list of LATEX commands which might be helpful. The list includes commands I used during my graduate course. The list was created for my reference so I don't have to keep searching somewhere else in case I forgot one or some of these.</p>
+<p> To begin these are not very difficult to get hang of once you start using it regularly for writing assignments, notes, references, resumes, etc. I also have some templates [here](https://github.com/apoorv98/latex-templates) so check them out, and search the internet if this list is not sufficient. I will also link some useful websites down below for reference. </p>
+
+<h2 class="section-heading"> Commonly used packages</h2>
+
+<p>It’s true you can add functionality to LATEX by adding packages like additional fonts, specific math commands, additional text edition features. You need to import them before begining the document. Some of the ones I use on a regular basis are:</p>
+
+<ul>
+  <li>\usepackage{times}</li>
+  <li>\usepackage{fancyhdr}</li>
+  <li>\usepackage{textcomp}</li>
+  <li>\usepackage{titling}</li>
+  <li>\usepackage{hyperref}</li>
+  <li>\usepackage{amsmath}</li>
+</ul>
+
+<h2 id="commonly-used-commands">Commonly used commands</h2>
+
+<ul>
+  <li>Creating tables</li>
+</ul>
+
+<p><code class="highlighter-rouge">
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	A &amp; B &amp; C 	\\
+	\hline
+	1 &amp; 2 &amp; 3	\\
+	\hline 
+	\end{tablular}
+\end{center}
+</code></p>
+
+<p>This will create a table that looks like</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>| A | B | C |
+|---|---|---|
+| 1 | 2 | 3 |
+</code></pre>
+</div>
+
+<h2 id="math-specific-commands">Math specific commands</h2>
+<ul>
+  <li>\mathbf - Bold face text in math mode</li>
+</ul>
+
+<h2 id="useful-links">Useful links:</h2>
+<ul>
+  <li><a href="https://en.wikibooks.org/wiki/LaTeX">WikiBooks</a> - Original resource, might scare at first because of the book in the title. Don’t worry it’s easy to follow. But check the following links for quick reference when you are stuck. There are also other guides around, but this covers all in detail.</li>
+  <li><a href="https://www.sharelatex.com/learn">ShareLATEX</a> - Very helpful especially for beginners.</li>
+  <li><a href="http://tex.stackexchange.com/questions/">http://tex.stackexchange.com/questions/</a> - Community or forum based site, lots of people with experience to answer your questions or make you better in LATEX in general.</li>
+  <li><a href="https://wch.github.io/latexsheet/">Cheat sheet</a> - I wouldn’t recommend this, but hey having a cheatsheet around is not a bad idea.</li>
+</ul>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+<hr>
+
+ <div class="container">
+        <div class="row">
+        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div id="disqus_thread"></div>
+			<script>
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+				 */
+				/**
+				var disqus_config = function () {
+					this.page.url = "https://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				**/
+				(function() {  // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+				
+					s.src = '//apoorvjagtap.disqus.com/embed.js';
+				
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+		</div>
+	</div>
+
+    </div>
+
+    <footer class="footer">
+  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-text pull-left">
+        <p>© 2017 Apoorv Jagtap</p>
+      </div>
+      <!--<div class="navbar-text pull-left">
+ &copy; 2014 - 2015 <a href="http://apoorv98.github.io/">Apoorv Jagtap</a>All Rights Reserved.
+ 		</div> -->
+      <div class="navbar-text pull-right">
+      <ul>
+        <li><a href="https://www.facebook.com/apoorv.jagtap"><i style='margin-right:4px' class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="https://twitter.com/apoorv_jagtap"><i style='margin-right:4px' class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/apoorv-jagtap-882a3683"><i style='margin-right:4px' class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://github.com/apoorv98"><i class="fa fa-github fa-2x"></i></a></li>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-74496807-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</footer>
+
+
+  </body>
+
+</html>
