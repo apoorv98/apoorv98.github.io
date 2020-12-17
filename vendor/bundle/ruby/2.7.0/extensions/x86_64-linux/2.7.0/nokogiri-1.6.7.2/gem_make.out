@@ -1,0 +1,1493 @@
+current directory: /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ext/nokogiri
+/usr/bin/ruby -I /usr/lib/ruby/2.7.0 -r ./siteconf20201217-1941717-1eu1nhy.rb extconf.rb
+checking if the C compiler accepts ... yes
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.0.0
+checking for gzdopen() in -lz... yes
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.2
+with the following patches applied:
+	- 0001-Revert-Missing-initialization-for-the-catalog-module.patch
+	- 0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch
+	- 0003-Stop-parsing-on-entities-boundaries-errors.patch
+	- 0004-Cleanup-conditional-section-error-handling.patch
+	- 0005-CVE-2015-1819-Enforce-the-reader-to-run-in-constant-.patch
+	- 0006-Another-variation-of-overflow-in-Conditional-section.patch
+	- 0007-Fix-an-error-in-previous-Conditional-section-patch.patch
+	- 0008-CVE-2015-8035-Fix-XZ-compression-support-loop.patch
+	- 0009-Updated-config.guess.patch
+	- 0010-Fix-parsering-short-unclosed-comment-uninitialized-access.patch
+	- 0011-Avoid-extra-processing-of-MarkupDecl-when-EOF.patch
+	- 0012-Avoid-processing-entities-after-encoding-conversion-.patch
+	- 0013-CVE-2015-7497-Avoid-an-heap-buffer-overflow-in-xmlDi.patch
+	- 0014-CVE-2015-5312-Another-entity-expansion-issue.patch
+	- 0015-Add-xmlHaltParser-to-stop-the-parser.patch
+	- 0016-Detect-incoherency-on-GROW.patch
+	- 0017-CVE-2015-7500-Fix-memory-access-error-due-to-incorre.patch
+	- 0018-CVE-2015-8242-Buffer-overead-with-HTML-parser-in-pus.patch
+	- 0019-Do-not-print-error-context-when-there-is-none.patch
+	- 0020-xmlStopParser-reset-errNo.patch
+	- 0021-Reuse-xmlHaltParser-where-it-makes-sense.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.2.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.2... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0001-Revert-Missing-initialization-for-the-catalog-module.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0003-Stop-parsing-on-entities-boundaries-errors.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0004-Cleanup-conditional-section-error-handling.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0005-CVE-2015-1819-Enforce-the-reader-to-run-in-constant-.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0006-Another-variation-of-overflow-in-Conditional-section.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0007-Fix-an-error-in-previous-Conditional-section-patch.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0008-CVE-2015-8035-Fix-XZ-compression-support-loop.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0009-Updated-config.guess.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0010-Fix-parsering-short-unclosed-comment-uninitialized-access.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0011-Avoid-extra-processing-of-MarkupDecl-when-EOF.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0012-Avoid-processing-entities-after-encoding-conversion-.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0013-CVE-2015-7497-Avoid-an-heap-buffer-overflow-in-xmlDi.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0014-CVE-2015-5312-Another-entity-expansion-issue.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0015-Add-xmlHaltParser-to-stop-the-parser.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0016-Detect-incoherency-on-GROW.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0017-CVE-2015-7500-Fix-memory-access-error-due-to-incorre.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0018-CVE-2015-8242-Buffer-overead-with-HTML-parser-in-pus.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0019-Do-not-print-error-context-when-there-is-none.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0020-xmlStopParser-reset-errNo.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxml2/0021-Reuse-xmlHaltParser-where-it-makes-sense.patch... OK
+Running 'configure' for libxml2 2.9.2... OK
+Running 'compile' for libxml2 2.9.2... OK
+Running 'install' for libxml2 2.9.2... OK
+Activating libxml2 2.9.2 (from /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.2)...
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxslt-1.1.28
+with the following patches applied:
+	- 0001-Adding-doc-update-related-to-1.1.28.patch
+	- 0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch
+	- 0003-Initialize-pseudo-random-number-generator-with-curre.patch
+	- 0004-EXSLT-function-str-replace-is-broken-as-is.patch
+	- 0006-Fix-str-padding-to-work-with-UTF-8-strings.patch
+	- 0007-Separate-function-for-predicate-matching-in-patterns.patch
+	- 0008-Fix-direct-pattern-matching.patch
+	- 0009-Fix-certain-patterns-with-predicates.patch
+	- 0010-Fix-handling-of-UTF-8-strings-in-EXSLT-crypto-module.patch
+	- 0013-Memory-leak-in-xsltCompileIdKeyPattern-error-path.patch
+	- 0014-Fix-for-bug-436589.patch
+	- 0015-Fix-mkdir-for-mingw.patch
+	- 0016-Fix-for-type-confusion-in-preprocessing-attributes.patch
+	- 0017-Updated-config.guess.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+************************************************************************
+Extracting libxslt-1.1.28.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.28... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0004-EXSLT-function-str-replace-is-broken-as-is.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0006-Fix-str-padding-to-work-with-UTF-8-strings.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0007-Separate-function-for-predicate-matching-in-patterns.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0008-Fix-direct-pattern-matching.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0009-Fix-certain-patterns-with-predicates.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0010-Fix-handling-of-UTF-8-strings-in-EXSLT-crypto-module.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0013-Memory-leak-in-xsltCompileIdKeyPattern-error-path.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0014-Fix-for-bug-436589.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0015-Fix-mkdir-for-mingw.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0016-Fix-for-type-confusion-in-preprocessing-attributes.patch... OK
+Running git apply with /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/patches/libxslt/0017-Updated-config.guess.patch... OK
+Running 'configure' for libxslt 1.1.28... OK
+Running 'compile' for libxslt 1.1.28... OK
+Running 'install' for libxslt 1.1.28... OK
+Activating libxslt 1.1.28 (from /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.28)...
+checking for -llzma... yes
+checking for xmlParseDoc() in libxml/parser.h... yes
+checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
+checking for exsltFuncRegister() in libexslt/exslt.h... yes
+checking for xmlHasFeature()... yes
+checking for xmlFirstElementChild()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetValidStructuredErrors()... yes
+checking for xmlSchemaSetValidStructuredErrors()... yes
+checking for xmlSchemaSetParserStructuredErrors()... yes
+creating Makefile
+
+current directory: /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ext/nokogiri
+make "DESTDIR=" clean
+
+current directory: /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ext/nokogiri
+make "DESTDIR="
+compiling html_document.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_document.h:4,
+                 from html_document.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./html_document.h:4,
+                 from html_document.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_document.h:4,
+                 from html_document.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_document.h:4,
+                 from html_document.c:1:
+html_document.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+html_document.c:16:3: note: in expansion of macro ‘rb_scan_args’
+   16 |   rb_scan_args(argc, argv, "0*", &rest);
+      |   ^~~~~~~~~~~~
+compiling html_element_description.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_element_description.h:4,
+                 from html_element_description.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./html_element_description.h:4,
+                 from html_element_description.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_element_description.h:4,
+                 from html_element_description.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_element_description.h:4,
+                 from html_element_description.c:1:
+html_element_description.c: In function ‘get_description’:
+html_element_description.c:252:40: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  252 |   return Data_Wrap_Struct(klass, 0, 0, (void *)description);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1212:34: note: in definition of macro ‘Data_Wrap_Struct’
+ 1212 |     rb_data_object_wrap((klass),(sval),(RUBY_DATA_FUNC)(mark),(RUBY_DATA_FUNC)(free))
+      |                                  ^~~~
+compiling html_entity_lookup.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_entity_lookup.h:4,
+                 from html_entity_lookup.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./html_entity_lookup.h:4,
+                 from html_entity_lookup.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_entity_lookup.h:4,
+                 from html_entity_lookup.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling html_sax_parser_context.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_sax_parser_context.h:4,
+                 from html_sax_parser_context.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./html_sax_parser_context.h:4,
+                 from html_sax_parser_context.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_sax_parser_context.h:4,
+                 from html_sax_parser_context.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling html_sax_push_parser.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_sax_push_parser.h:4,
+                 from html_sax_push_parser.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./html_sax_push_parser.h:4,
+                 from html_sax_push_parser.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./html_sax_push_parser.h:4,
+                 from html_sax_push_parser.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling nokogiri.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from nokogiri.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from nokogiri.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from nokogiri.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_attr.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_attr.h:4,
+                 from xml_attr.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_attr.h:4,
+                 from xml_attr.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_attr.h:4,
+                 from xml_attr.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_attr.h:4,
+                 from xml_attr.c:1:
+xml_attr.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_attr.c:58:3: note: in expansion of macro ‘rb_scan_args’
+   58 |   rb_scan_args(argc, argv, "2*", &document, &name, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_attribute_decl.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_attribute_decl.h:4,
+                 from xml_attribute_decl.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_attribute_decl.h:4,
+                 from xml_attribute_decl.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_attribute_decl.h:4,
+                 from xml_attribute_decl.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_cdata.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_cdata.h:4,
+                 from xml_cdata.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_cdata.h:4,
+                 from xml_cdata.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_cdata.h:4,
+                 from xml_cdata.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_cdata.h:4,
+                 from xml_cdata.c:1:
+xml_cdata.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_cdata.c:18:3: note: in expansion of macro ‘rb_scan_args’
+   18 |   rb_scan_args(argc, argv, "2*", &doc, &content, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_comment.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_comment.h:4,
+                 from xml_comment.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_comment.h:4,
+                 from xml_comment.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_comment.h:4,
+                 from xml_comment.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_comment.h:4,
+                 from xml_comment.c:1:
+xml_comment.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_comment.c:21:3: note: in expansion of macro ‘rb_scan_args’
+   21 |   rb_scan_args(argc, argv, "2*", &document, &content, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_document.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_document.h:4,
+                 from xml_document.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_document.h:4,
+                 from xml_document.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_document.h:4,
+                 from xml_document.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+xml_document.c: In function ‘dealloc’:
+xml_document.c:46:25: warning: passing argument 2 of ‘rb_st_foreach’ from incompatible pointer type [-Wincompatible-pointer-types]
+   46 |   st_foreach(node_hash, dealloc_node_i, (st_data_t)doc);
+      |                         ^~~~~~~~~~~~~~
+      |                         |
+      |                         int (*)(xmlNode *, xmlNode *, xmlDoc *) {aka int (*)(struct _xmlNode *, struct _xmlNode *, struct _xmlDoc *)}
+In file included from /usr/include/ruby-2.7.0/ruby/intern.h:39,
+                 from /usr/include/ruby-2.7.0/ruby/ruby.h:2148,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_document.h:4,
+                 from xml_document.c:1:
+/usr/include/ruby-2.7.0/ruby/st.h:141:31: note: expected ‘int (*)(st_data_t,  st_data_t,  st_data_t)’ {aka ‘int (*)(long unsigned int,  long unsigned int,  long unsigned int)’} but argument is of type ‘int (*)(xmlNode *, xmlNode *, xmlDoc *)’ {aka ‘int (*)(struct _xmlNode *, struct _xmlNode *, struct _xmlDoc *)’}
+  141 | int rb_st_foreach(st_table *, st_foreach_callback_func *, st_data_t);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+xml_document.c: In function ‘set_encoding’:
+xml_document.c:182:12: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  182 |       free((char *) doc->encoding); /* this may produce a gcc cast warning */
+      |            ^
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_document.h:4,
+                 from xml_document.c:1:
+xml_document.c: In function ‘duplicate_document’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_document.c:327:6: note: in expansion of macro ‘rb_scan_args’
+  327 |   if(rb_scan_args(argc, argv, "01", &level) == 0)
+      |      ^~~~~~~~~~~~
+xml_document.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_document.c:356:3: note: in expansion of macro ‘rb_scan_args’
+  356 |   rb_scan_args(argc, argv, "0*", &rest);
+      |   ^~~~~~~~~~~~
+xml_document.c: In function ‘create_entity’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_document.c:435:3: note: in expansion of macro ‘rb_scan_args’
+  435 |   rb_scan_args(argc, argv, "14", &name, &type, &external_id, &system_id,
+      |   ^~~~~~~~~~~~
+xml_document.c: In function ‘canonicalize’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_document.c:510:3: note: in expansion of macro ‘rb_scan_args’
+  510 |   rb_scan_args(argc, argv, "03", &mode, &incl_ns, &with_comments);
+      |   ^~~~~~~~~~~~
+xml_document.c:537:15: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  537 |       ns[i] = (xmlChar*) ptr;
+      |               ^
+compiling xml_document_fragment.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_document_fragment.h:4,
+                 from xml_document_fragment.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_document_fragment.h:4,
+                 from xml_document_fragment.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_document_fragment.h:4,
+                 from xml_document_fragment.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_document_fragment.h:4,
+                 from xml_document_fragment.c:1:
+xml_document_fragment.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_document_fragment.c:17:3: note: in expansion of macro ‘rb_scan_args’
+   17 |   rb_scan_args(argc, argv, "1*", &document, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_dtd.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_dtd.h:4,
+                 from xml_dtd.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_dtd.h:4,
+                 from xml_dtd.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_dtd.h:4,
+                 from xml_dtd.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_element_content.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_element_content.h:4,
+                 from xml_element_content.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_element_content.h:4,
+                 from xml_element_content.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_element_content.h:4,
+                 from xml_element_content.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_element_decl.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_element_decl.h:4,
+                 from xml_element_decl.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_element_decl.h:4,
+                 from xml_element_decl.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_element_decl.h:4,
+                 from xml_element_decl.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_encoding_handler.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_encoding_handler.h:4,
+                 from xml_encoding_handler.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_encoding_handler.h:4,
+                 from xml_encoding_handler.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_encoding_handler.h:4,
+                 from xml_encoding_handler.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_entity_decl.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_entity_decl.h:4,
+                 from xml_entity_decl.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_entity_decl.h:4,
+                 from xml_entity_decl.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_entity_decl.h:4,
+                 from xml_entity_decl.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_entity_reference.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_entity_reference.h:4,
+                 from xml_entity_reference.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_entity_reference.h:4,
+                 from xml_entity_reference.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_entity_reference.h:4,
+                 from xml_entity_reference.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_entity_reference.h:4,
+                 from xml_entity_reference.c:1:
+xml_entity_reference.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_entity_reference.c:18:3: note: in expansion of macro ‘rb_scan_args’
+   18 |   rb_scan_args(argc, argv, "2*", &document, &name, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_io.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_io.h:4,
+                 from xml_io.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_io.h:4,
+                 from xml_io.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_io.h:4,
+                 from xml_io.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+xml_io.c: In function ‘io_read_callback’:
+xml_io.c:20:22: warning: passing argument 1 of ‘rb_rescue’ from incompatible pointer type [-Wincompatible-pointer-types]
+   20 |   string = rb_rescue(read_check, (VALUE)args, read_failed, 0);
+      |                      ^~~~~~~~~~
+      |                      |
+      |                      VALUE (*)(VALUE *) {aka long unsigned int (*)(long unsigned int *)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_io.h:4,
+                 from xml_io.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1987:17: note: expected ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE *)’ {aka ‘long unsigned int (*)(long unsigned int *)’}
+ 1987 | VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+xml_io.c:20:47: warning: passing argument 3 of ‘rb_rescue’ from incompatible pointer type [-Wincompatible-pointer-types]
+   20 |   string = rb_rescue(read_check, (VALUE)args, read_failed, 0);
+      |                                               ^~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(void) {aka long unsigned int (*)(void)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_io.h:4,
+                 from xml_io.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1987:39: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(void)’ {aka ‘long unsigned int (*)(void)’}
+ 1987 | VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+xml_io.c: In function ‘io_write_callback’:
+xml_io.c:46:20: warning: passing argument 1 of ‘rb_rescue’ from incompatible pointer type [-Wincompatible-pointer-types]
+   46 |   size = rb_rescue(write_check, (VALUE)args, write_failed, 0);
+      |                    ^~~~~~~~~~~
+      |                    |
+      |                    VALUE (*)(VALUE *) {aka long unsigned int (*)(long unsigned int *)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_io.h:4,
+                 from xml_io.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1987:17: note: expected ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE *)’ {aka ‘long unsigned int (*)(long unsigned int *)’}
+ 1987 | VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+xml_io.c:46:46: warning: passing argument 3 of ‘rb_rescue’ from incompatible pointer type [-Wincompatible-pointer-types]
+   46 |   size = rb_rescue(write_check, (VALUE)args, write_failed, 0);
+      |                                              ^~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(void) {aka long unsigned int (*)(void)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_io.h:4,
+                 from xml_io.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1987:39: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(void)’ {aka ‘long unsigned int (*)(void)’}
+ 1987 | VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+compiling xml_libxml2_hacks.c
+compiling xml_namespace.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_namespace.h:4,
+                 from xml_namespace.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_namespace.h:4,
+                 from xml_namespace.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_namespace.h:4,
+                 from xml_namespace.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_node.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node.h:4,
+                 from xml_node.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_node.h:4,
+                 from xml_node.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node.h:4,
+                 from xml_node.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+xml_node.c: In function ‘reparent_node_with’:
+xml_node.c:168:7: warning: enumeration value ‘XML_ATTRIBUTE_NODE’ not handled in switch [-Wswitch]
+  168 |       switch (reparentee->type) {
+      |       ^~~~~~
+xml_node.c:168:7: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_DOCUMENT_FRAG_NODE’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_HTML_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch [-Wswitch]
+xml_node.c:168:7: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_ATTRIBUTE_NODE’ not handled in switch [-Wswitch]
+  186 |       switch (reparentee->type) {
+      |       ^~~~~~
+xml_node.c:186:7: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_DOCUMENT_TYPE_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_DOCUMENT_FRAG_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_HTML_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch [-Wswitch]
+xml_node.c:186:7: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_ELEMENT_NODE’ not handled in switch [-Wswitch]
+  197 |       switch (reparentee->type) {
+      |       ^~~~~~
+xml_node.c:197:7: warning: enumeration value ‘XML_ATTRIBUTE_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_CDATA_SECTION_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_PI_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_COMMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_DOCUMENT_TYPE_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_DOCUMENT_FRAG_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_HTML_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch [-Wswitch]
+xml_node.c:197:7: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_CDATA_SECTION_NODE’ not handled in switch [-Wswitch]
+  165 |     switch (parent->type) {
+      |     ^~~~~~
+xml_node.c:165:5: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_PI_NODE’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_COMMENT_NODE’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_DOCUMENT_TYPE_NODE’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch [-Wswitch]
+xml_node.c:165:5: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node.h:4,
+                 from xml_node.c:1:
+xml_node.c: In function ‘duplicate_node’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_node.c:479:6: note: in expansion of macro ‘rb_scan_args’
+  479 |   if(rb_scan_args(argc, argv, "01", &level) == 0)
+      |      ^~~~~~~~~~~~
+xml_node.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_node.c:1318:3: note: in expansion of macro ‘rb_scan_args’
+ 1318 |   rb_scan_args(argc, argv, "2*", &name, &document, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_node_set.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node_set.h:4,
+                 from xml_node_set.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_node_set.h:4,
+                 from xml_node_set.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node_set.h:4,
+                 from xml_node_set.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+xml_node_set.c: In function ‘dealloc_namespace’:
+xml_node_set.c:9:13: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+    9 |     xmlFree((xmlChar *)ns->href);
+      |             ^
+xml_node_set.c:11:13: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+   11 |     xmlFree((xmlChar *)ns->prefix);
+      |             ^
+xml_node_set.c: In function ‘deallocate’:
+xml_node_set.c:52:33: warning: passing argument 2 of ‘rb_st_foreach’ from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |   st_foreach(tuple->namespaces, dealloc_namespace, 0);
+      |                                 ^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 int (*)(xmlNs *) {aka int (*)(struct _xmlNs *)}
+In file included from /usr/include/ruby-2.7.0/ruby/intern.h:39,
+                 from /usr/include/ruby-2.7.0/ruby/ruby.h:2148,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node_set.h:4,
+                 from xml_node_set.c:1:
+/usr/include/ruby-2.7.0/ruby/st.h:141:31: note: expected ‘int (*)(st_data_t,  st_data_t,  st_data_t)’ {aka ‘int (*)(long unsigned int,  long unsigned int,  long unsigned int)’} but argument is of type ‘int (*)(xmlNs *)’ {aka ‘int (*)(struct _xmlNs *)’}
+  141 | int rb_st_foreach(st_table *, st_foreach_callback_func *, st_data_t);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node_set.h:4,
+                 from xml_node_set.c:1:
+xml_node_set.c: In function ‘slice’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_node_set.c:329:5: note: in expansion of macro ‘rb_scan_args’
+  329 |     rb_scan_args(argc, argv, "11", NULL, NULL);
+      |     ^~~~~~~~~~~~
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node_set.h:4,
+                 from xml_node_set.c:1:
+xml_node_set.c: In function ‘init_xml_node_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2799:117: warning: passing argument 3 of ‘rb_define_method0’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 2799 | #define rb_define_method(klass, mid, func, arity) rb_define_method_choose_prototypem3((arity),(func))((klass),(mid),(func),(arity));
+      |                                                                                                                     ^~~~~~
+      |                                                                                                                     |
+      |                                                                                                                     VALUE (*)(VALUE,  VALUE) {aka long unsigned int (*)(long unsigned int,  long unsigned int)}
+xml_node_set.c:460:3: note: in expansion of macro ‘rb_define_method’
+  460 |   rb_define_method(klass, "to_a", to_array, 0);
+      |   ^~~~~~~~~~~~~~~~
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:2148,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_node_set.h:4,
+                 from xml_node_set.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2775:27: note: expected ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’}
+ 2775 | RB_METHOD_DEFINITION_DECL(rb_define_method, (2,3), (VALUE klass, const char *name), (klass, name))
+      |                           ^~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1042:82: note: in definition of macro ‘RB_METHOD_DEFINITION_DECL_C’
+ 1042 |     __attribute__((__unused__,__weakref__(#def),__nonnull__ nonnull))static void defname(RB_UNWRAP_MACRO decl,VALUE(*func)funcargs,int arity);
+      |                                                                                  ^~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1074:1: note: in expansion of macro ‘RB_METHOD_DEFINITION_DECL_1’
+ 1074 | RB_METHOD_DEFINITION_DECL_1(def,nonnull,def##0 ,0 ,decl,vars,(VALUE)) \
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/ruby.h:2775:1: note: in expansion of macro ‘RB_METHOD_DEFINITION_DECL’
+ 2775 | RB_METHOD_DEFINITION_DECL(rb_define_method, (2,3), (VALUE klass, const char *name), (klass, name))
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+compiling xml_processing_instruction.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_processing_instruction.h:4,
+                 from xml_processing_instruction.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_processing_instruction.h:4,
+                 from xml_processing_instruction.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_processing_instruction.h:4,
+                 from xml_processing_instruction.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_processing_instruction.h:4,
+                 from xml_processing_instruction.c:1:
+xml_processing_instruction.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_processing_instruction.c:20:3: note: in expansion of macro ‘rb_scan_args’
+   20 |   rb_scan_args(argc, argv, "3*", &document, &name, &content, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_reader.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_reader.h:4,
+                 from xml_reader.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_reader.h:4,
+                 from xml_reader.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_reader.h:4,
+                 from xml_reader.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_reader.h:4,
+                 from xml_reader.c:1:
+xml_reader.c: In function ‘from_memory’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_reader.c:546:3: note: in expansion of macro ‘rb_scan_args’
+  546 |   rb_scan_args(argc, argv, "13", &rb_buffer, &rb_url, &encoding, &rb_options);
+      |   ^~~~~~~~~~~~
+xml_reader.c: In function ‘from_io’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_reader.c:590:3: note: in expansion of macro ‘rb_scan_args’
+  590 |   rb_scan_args(argc, argv, "13", &rb_io, &rb_url, &encoding, &rb_options);
+      |   ^~~~~~~~~~~~
+compiling xml_relax_ng.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_relax_ng.h:4,
+                 from xml_relax_ng.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_relax_ng.h:4,
+                 from xml_relax_ng.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_relax_ng.h:4,
+                 from xml_relax_ng.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_sax_parser.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_sax_parser.h:4,
+                 from xml_sax_parser.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_sax_parser.h:4,
+                 from xml_sax_parser.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_sax_parser.h:4,
+                 from xml_sax_parser.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_sax_parser_context.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_sax_parser_context.h:4,
+                 from xml_sax_parser_context.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_sax_parser_context.h:4,
+                 from xml_sax_parser_context.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_sax_parser_context.h:4,
+                 from xml_sax_parser_context.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_sax_push_parser.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_sax_push_parser.h:4,
+                 from xml_sax_push_parser.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_sax_push_parser.h:4,
+                 from xml_sax_push_parser.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_sax_push_parser.h:4,
+                 from xml_sax_push_parser.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_schema.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_schema.h:4,
+                 from xml_schema.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_schema.h:4,
+                 from xml_schema.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_schema.h:4,
+                 from xml_schema.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_syntax_error.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_syntax_error.h:4,
+                 from xml_syntax_error.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_syntax_error.h:4,
+                 from xml_syntax_error.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_syntax_error.h:4,
+                 from xml_syntax_error.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+compiling xml_text.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_text.h:4,
+                 from xml_text.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_text.h:4,
+                 from xml_text.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_text.h:4,
+                 from xml_text.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_text.h:4,
+                 from xml_text.c:1:
+xml_text.c: In function ‘new’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_text.c:18:3: note: in expansion of macro ‘rb_scan_args’
+   18 |   rb_scan_args(argc, argv, "2*", &string, &document, &rest);
+      |   ^~~~~~~~~~~~
+compiling xml_xpath_context.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_xpath_context.h:4,
+                 from xml_xpath_context.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xml_xpath_context.h:4,
+                 from xml_xpath_context.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_xpath_context.h:4,
+                 from xml_xpath_context.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xml_xpath_context.h:4,
+                 from xml_xpath_context.c:1:
+xml_xpath_context.c: In function ‘evaluate’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xml_xpath_context.c:203:6: note: in expansion of macro ‘rb_scan_args’
+  203 |   if(rb_scan_args(argc, argv, "11", &search_path, &xpath_handler) == 1)
+      |      ^~~~~~~~~~~~
+compiling xslt_stylesheet.c
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xslt_stylesheet.h:4,
+                 from xslt_stylesheet.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h: In function ‘rb_scan_args_set’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2592:40: warning: conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 2592 |         memcpy(ptr, argv, sizeof(VALUE)*argc);
+      |                                        ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:1763:54: note: in definition of macro ‘memcpy’
+ 1763 | #define memcpy(p1,p2,n) ruby_nonempty_memcpy(p1, p2, n)
+      |                                                      ^
+In file included from ./xslt_stylesheet.h:4,
+                 from xslt_stylesheet.c:1:
+./nokogiri.h: At top level:
+./nokogiri.h:43: warning: "MAYBE_UNUSED" redefined
+   43 | #  define MAYBE_UNUSED(name) name __attribute__((unused))
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:24,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xslt_stylesheet.h:4,
+                 from xslt_stylesheet.c:1:
+/usr/include/ruby-2.7.0/x86_64-linux/ruby/config.h:152: note: this is the location of the previous definition
+  152 | #define MAYBE_UNUSED(x) __attribute__ ((__unused__)) x
+      | 
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xslt_stylesheet.h:4,
+                 from xslt_stylesheet.c:1:
+xslt_stylesheet.c: In function ‘transform’:
+/usr/include/ruby-2.7.0/ruby/ruby.h:2508:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2508 |        (rb_scan_args_verify(fmt, varc), vars), (char *)fmt, varc)
+      |                                                ^
+/usr/include/ruby-2.7.0/ruby/ruby.h:2340:9: note: in expansion of macro ‘rb_scan_args0’
+ 2340 |         rb_scan_args0(argc,argvp,fmt,\
+      |         ^~~~~~~~~~~~~
+xslt_stylesheet.c:141:5: note: in expansion of macro ‘rb_scan_args’
+  141 |     rb_scan_args(argc, argv, "11", &xmldoc, &paramobj);
+      |     ^~~~~~~~~~~~
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./nokogiri.h:33,
+                 from ./xslt_stylesheet.h:4,
+                 from xslt_stylesheet.c:1:
+xslt_stylesheet.c: In function ‘initFunc’:
+xslt_stylesheet.c:217:32: warning: passing argument 1 of ‘rb_data_object_get’ makes integer from pointer without a cast [-Wint-conversion]
+  217 |     Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
+      |                     ~~~~~~~~~~~^~~~~~~~~~
+      |                                |
+      |                                void *
+/usr/include/ruby-2.7.0/ruby/ruby.h:1250:41: note: in definition of macro ‘Data_Get_Struct’
+ 1250 |     ((sval) = (type*)rb_data_object_get(obj))
+      |                                         ^~~
+/usr/include/ruby-2.7.0/ruby/ruby.h:1423:26: note: expected ‘VALUE’ {aka ‘long unsigned int’} but argument is of type ‘void *’
+ 1423 | rb_data_object_get(VALUE obj)
+      |                    ~~~~~~^~~
+xslt_stylesheet.c: In function ‘shutdownFunc’:
+xslt_stylesheet.c:230:32: warning: passing argument 1 of ‘rb_data_object_get’ makes integer from pointer without a cast [-Wint-conversion]
+  230 |     Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
+      |                     ~~~~~~~~~~~^~~~~~~~~~
+      |                                |
+      |                                void *
+/usr/include/ruby-2.7.0/ruby/ruby.h:1250:41: note: in definition of macro ‘Data_Get_Struct’
+ 1250 |     ((sval) = (type*)rb_data_object_get(obj))
+      |                                         ^~~
+/usr/include/ruby-2.7.0/ruby/ruby.h:1423:26: note: expected ‘VALUE’ {aka ‘long unsigned int’} but argument is of type ‘void *’
+ 1423 | rb_data_object_get(VALUE obj)
+      |                    ~~~~~~^~~
+linking shared-object nokogiri/nokogiri.so
+Cleaning files only used during build.
+rm -rf /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports
+rmdir -p /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu
+rm -rf /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ports
+
+current directory: /home/apoorv/build/apoorv98.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.6.7.2/ext/nokogiri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20201217-1941717-iv101q/nokogiri

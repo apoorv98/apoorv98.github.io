@@ -1,0 +1,52 @@
+have_library: checking for main() in -lc... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC -O0 -Wall  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby  -lm   -lc"
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdio.h:27,
+                 from /usr/include/ruby-2.7.0/ruby/defines.h:126,
+                 from /usr/include/ruby-2.7.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:397:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  397 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC -O0 -Wall  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby -lc  -lm   -lc"
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdio.h:27,
+                 from /usr/include/ruby-2.7.0/ruby/defines.h:126,
+                 from /usr/include/ruby-2.7.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:397:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  397 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return !p; }
+/* end */
+
+--------------------
+
