@@ -1,7 +1,7 @@
 plugins: [jekyll-paginate]
 # Site settings
-title: Apoorv Jagtap's Homepage
-email: apoorvjagtap@gmail.com
+title: Homepage
+email: apoorvjagtap@protonmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Apoorv Jagtap's homepage.
 baseurl: "" # the subpath of your site, e.g. /blog/
