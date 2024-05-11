@@ -4,10 +4,10 @@
     <title>Homepage</title>
     <description>Apoorv Jagtap's homepage.
 </description>
-    <link>http://apoorv98.github.io//</link>
-    <atom:link href="http://apoorv98.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Jul 2023 15:08:04 +0530</pubDate>
-    <lastBuildDate>Tue, 25 Jul 2023 15:08:04 +0530</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 06 Mar 2024 16:23:49 +0530</pubDate>
+    <lastBuildDate>Wed, 06 Mar 2024 16:23:49 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -52,8 +52,8 @@ Without further ado let’s get into the content for this post.&lt;/p&gt;
 &lt;p&gt;Next lesson will continue with these basic ideas and expand them further, so read along &lt;a href=&quot;&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Jun 2016 23:30:00 +0530</pubDate>
-        <link>http://apoorv98.github.io//2016/06/23/lesson1-notes.html</link>
-        <guid isPermaLink="true">http://apoorv98.github.io//2016/06/23/lesson1-notes.html</guid>
+        <link>http://localhost:4000/2016/06/23/lesson1-notes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/23/lesson1-notes.html</guid>
         
         
       </item>
@@ -70,15 +70,15 @@ Without further ado let’s get into the content for this post.&lt;/p&gt;
 
 &lt;p&gt;Convolutional neural nets are commonly used in neural networks for dealing with images. To illustrate their working, he uses a simple matrix and an image of handwritten digit 7. Now he correlates these to matrices to output the results as shown below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://apoorv98.github.io//images/lesson0_matrix.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/lesson0_matrix.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This exact approach is used in conv nets to detect edges, and many such matrices are employed for detecting other features (example: corners, curves), and deep layers are even able to detect objects as seen later in the course. You can play around with the matrices and see the different results. Now, instead of handcrafting these matrices they are randomly initialized and the goal is to update them to get the predicted output as close to the actual output. These matrices are called Kernels or filters and more information can be found on &lt;a href=&quot;http://wiki.fast.ai/index.php/Lesson_0&quot;&gt;Lesson Wiki&lt;/a&gt;. A nice example with simple equation of a line is presented and solved with the help of neural network. The details are skipped here as I would want everyone to watch the video to get a better hang of what we will be learning and doing in this course.&lt;/p&gt;
 
 &lt;p&gt;This is a short video to kick things off, next lesson would be about setting up environment on your PC or AWS instance as detailed in the &lt;a href=&quot;link coming soon&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jun 2016 23:30:00 +0530</pubDate>
-        <link>http://apoorv98.github.io//deeplearning/2016/06/16/lesson0-notes.html</link>
-        <guid isPermaLink="true">http://apoorv98.github.io//deeplearning/2016/06/16/lesson0-notes.html</guid>
+        <link>http://localhost:4000/deeplearning/2016/06/16/lesson0-notes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/deeplearning/2016/06/16/lesson0-notes.html</guid>
         
         
         <category>deeplearning</category>

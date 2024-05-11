@@ -10,8 +10,8 @@
   <meta name="description" content="  There is Lesson 0, please check it out first so you don’t miss anything.There I have mentioned some important links and purpose of this course.Without furt...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://apoorv98.github.io//2016/06/23/lesson1-notes.html">
-  <link rel="alternate" type="application/rss+xml" title="Homepage" href="http://apoorv98.github.io//feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/2016/06/23/lesson1-notes.html">
+  <link rel="alternate" type="application/rss+xml" title="Homepage" href="http://localhost:4000/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
   <!-- Custom CSS -->
@@ -58,7 +58,7 @@
            <!-- <li class="active"><a href="/">Home</a></li> -->
            <li><a href="/">Home</a></li>
            <!-- <li><a href="/blog">Blog</a></li> -->
-           <li><a href="/research">Projects</a></li>
+           <li><a href="/projects">Projects</a></li>
 <!--                <li class="divider"></li>
                <li class="dropdown-header">Portfolio</li>
                <li><a href="#">Portfolio 1</a></li>
@@ -89,27 +89,31 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
     <div class="body">
       <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/images/fastai.png')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>Fastai Course Summary: Lesson 1</h1>
-                    
-                    <span class="meta">Posted by Apoorv Jagtap on June 23, 2016</span>
-                </div>
-            </div>
+<header
+  class="intro-header"
+  style="background-image: url('/images/fastai.png')"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Fastai Course Summary: Lesson 1</h1>
+          
+          <span class="meta"
+            >Posted by Apoorv Jagtap on June 23, 2016</span
+          >
         </div>
+      </div>
     </div>
+  </div>
 </header>
 
 <!-- Post Content -->
 <article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-				<blockquote>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <blockquote>
   <p>There is <a href="">Lesson 0</a>, please check it out first so you don’t miss anything.
 There I have mentioned some important links and purpose of this course.
 Without further ado let’s get into the content for this post.</p>
@@ -149,51 +153,55 @@ Without further ado let’s get into the content for this post.</p>
 <p>Next lesson will continue with these basic ideas and expand them further, so read along <a href="">here</a>.</p>
 
 
-                <hr>
+        <hr />
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/deeplearning/2016/06/16/lesson0-notes.html" data-toggle="tooltip" data-placement="top" title="Fastai Course Summary: Lesson 0">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                </ul>
-
-            </div>
-        </div>
+        <ul class="pager">
+          
+          <li class="previous">
+            <a
+              href="/deeplearning/2016/06/16/lesson0-notes.html"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Fastai Course Summary: Lesson 0"
+              >&larr; Previous Post</a
+            >
+          </li>
+           
+        </ul>
+      </div>
     </div>
+  </div>
 </article>
-<hr>
+<hr />
 
- <div class="container">
-        <div class="row">
-        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<div id="disqus_thread"></div>
-			<script>
-				/**
-				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-				 */
-				/**
-				var disqus_config = function () {
-					this.page.url = "https://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
-					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-				};
-				**/
-				(function() {  // DON'T EDIT BELOW THIS LINE
-					var d = document, s = d.createElement('script');
-				
-					s.src = '//apoorvjagtap.disqus.com/embed.js';
-				
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-				})();
-			</script>
-			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-			</div>
-		</div>
-	</div>
+<!-- <div class="container">
+     <div class="row">
+     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	 <div id="disqus_thread"></div>
+	 <script>
+	 /**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+	 /**
+	 var disqus_config = function () {
+	 this.page.url = "https://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+	 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	 };
+	 **/
+	 (function() {  // DON'T EDIT BELOW THIS LINE
+	 var d = document, s = d.createElement('script');
+
+	 s.src = '//apoorvjagtap.disqus.com/embed.js';
+
+	 s.setAttribute('data-timestamp', +new Date());
+	 (d.head || d.body).appendChild(s);
+	 })();
+	 </script>
+	 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	 </div>
+	 </div>
+	 </div> -->
 
     </div>
 
@@ -201,7 +209,7 @@ Without further ado let’s get into the content for this post.</p>
   <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
       <div class="navbar-text pull-left">
-        <p>© 2023 Apoorv Jagtap</p>
+        <p>© 2024 Apoorv Jagtap</p>
       </div>
       <!--<div class="navbar-text pull-left">
  &copy; 2014 - 2015 <a href="http://apoorv98.github.io/">Apoorv Jagtap</a>All Rights Reserved.

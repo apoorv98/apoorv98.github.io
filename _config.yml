@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://apoorv98.github.io/" # the base hostname & protocol for your site
 twitter_username: apoorv_jagtap
-github_username:  apoorv98
+github_username: apoorv98
 exclude: [vendor]
 
 # paginate settings
@@ -17,4 +17,10 @@ paginate_path: "/blog/page:num"
 # Build settings
 markdown: kramdown
 sass:
-    sass_dir: _sass
+  sass_dir: _sass
+
+# collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:title

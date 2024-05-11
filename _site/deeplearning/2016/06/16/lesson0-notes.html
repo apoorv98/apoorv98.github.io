@@ -10,8 +10,8 @@
   <meta name="description" content="Since this the first post in the series, I would commence with recommending this course if you haven’t already taken it (and if you have already began write ...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://apoorv98.github.io//deeplearning/2016/06/16/lesson0-notes.html">
-  <link rel="alternate" type="application/rss+xml" title="Homepage" href="http://apoorv98.github.io//feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/deeplearning/2016/06/16/lesson0-notes.html">
+  <link rel="alternate" type="application/rss+xml" title="Homepage" href="http://localhost:4000/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
   <!-- Custom CSS -->
@@ -58,7 +58,7 @@
            <!-- <li class="active"><a href="/">Home</a></li> -->
            <li><a href="/">Home</a></li>
            <!-- <li><a href="/blog">Blog</a></li> -->
-           <li><a href="/research">Projects</a></li>
+           <li><a href="/projects">Projects</a></li>
 <!--                <li class="divider"></li>
                <li class="dropdown-header">Portfolio</li>
                <li><a href="#">Portfolio 1</a></li>
@@ -89,27 +89,31 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
     <div class="body">
       <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/images/fastai.png')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>Fastai Course Summary: Lesson 0</h1>
-                    
-                    <span class="meta">Posted by Apoorv Jagtap on June 16, 2016</span>
-                </div>
-            </div>
+<header
+  class="intro-header"
+  style="background-image: url('/images/fastai.png')"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Fastai Course Summary: Lesson 0</h1>
+          
+          <span class="meta"
+            >Posted by Apoorv Jagtap on June 16, 2016</span
+          >
         </div>
+      </div>
     </div>
+  </div>
 </header>
 
 <!-- Post Content -->
 <article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-				<p>Since this the first post in the series, I would commence with recommending this course if you haven’t already taken it (and if you have already began write a comment down below to work on group projects).</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p>Since this the first post in the series, I would commence with recommending this course if you haven’t already taken it (and if you have already began write a comment down below to work on group projects).</p>
 
 <p><strong>Warning</strong> : This course doesnot take a traditional approach and assumes some background knowledge. But the highlights of the course include practical approach from day 1 with all course materials available for free, <a href="http://wiki.fast.ai/index.php/Course_notes">course notes</a>, <a href="https://github.com/fastai/courses/tree/master/deeplearning1">course files</a> and really helpful <a href="http://forums.fast.ai/">forum</a> where even the course instructors participate regularly.</p>
 
@@ -119,58 +123,62 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
 <p>Convolutional neural nets are commonly used in neural networks for dealing with images. To illustrate their working, he uses a simple matrix and an image of handwritten digit 7. Now he correlates these to matrices to output the results as shown below:</p>
 
-<p><img src="http://apoorv98.github.io//images/lesson0_matrix.png" alt="" /></p>
+<p><img src="http://localhost:4000/images/lesson0_matrix.png" alt="" /></p>
 
 <p>This exact approach is used in conv nets to detect edges, and many such matrices are employed for detecting other features (example: corners, curves), and deep layers are even able to detect objects as seen later in the course. You can play around with the matrices and see the different results. Now, instead of handcrafting these matrices they are randomly initialized and the goal is to update them to get the predicted output as close to the actual output. These matrices are called Kernels or filters and more information can be found on <a href="http://wiki.fast.ai/index.php/Lesson_0">Lesson Wiki</a>. A nice example with simple equation of a line is presented and solved with the help of neural network. The details are skipped here as I would want everyone to watch the video to get a better hang of what we will be learning and doing in this course.</p>
 
 <p>This is a short video to kick things off, next lesson would be about setting up environment on your PC or AWS instance as detailed in the <a href="link coming soon">next post</a>.</p>
 
 
-                <hr>
+        <hr />
 
-                <ul class="pager">
-                    
-                    
-                    <li class="next">
-                        <a href="/2016/06/23/lesson1-notes.html" data-toggle="tooltip" data-placement="top" title="Fastai Course Summary: Lesson 1">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-            </div>
-        </div>
+        <ul class="pager">
+           
+          <li class="next">
+            <a
+              href="/2016/06/23/lesson1-notes.html"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Fastai Course Summary: Lesson 1"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
+        </ul>
+      </div>
     </div>
+  </div>
 </article>
-<hr>
+<hr />
 
- <div class="container">
-        <div class="row">
-        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<div id="disqus_thread"></div>
-			<script>
-				/**
-				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-				 */
-				/**
-				var disqus_config = function () {
-					this.page.url = "https://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
-					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-				};
-				**/
-				(function() {  // DON'T EDIT BELOW THIS LINE
-					var d = document, s = d.createElement('script');
-				
-					s.src = '//apoorvjagtap.disqus.com/embed.js';
-				
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-				})();
-			</script>
-			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-			</div>
-		</div>
-	</div>
+<!-- <div class="container">
+     <div class="row">
+     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	 <div id="disqus_thread"></div>
+	 <script>
+	 /**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+	 /**
+	 var disqus_config = function () {
+	 this.page.url = "https://apoorv98.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+	 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	 };
+	 **/
+	 (function() {  // DON'T EDIT BELOW THIS LINE
+	 var d = document, s = d.createElement('script');
+
+	 s.src = '//apoorvjagtap.disqus.com/embed.js';
+
+	 s.setAttribute('data-timestamp', +new Date());
+	 (d.head || d.body).appendChild(s);
+	 })();
+	 </script>
+	 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	 </div>
+	 </div>
+	 </div> -->
 
     </div>
 
@@ -178,7 +186,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
       <div class="navbar-text pull-left">
-        <p>© 2023 Apoorv Jagtap</p>
+        <p>© 2024 Apoorv Jagtap</p>
       </div>
       <!--<div class="navbar-text pull-left">
  &copy; 2014 - 2015 <a href="http://apoorv98.github.io/">Apoorv Jagtap</a>All Rights Reserved.
