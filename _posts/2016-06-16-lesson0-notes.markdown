@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      "Fastai Course Summary: Lesson 0"
+title:      "Class introduction and demo example | FastAI Lesson 0"
 date:       2016-06-16 18:00:00
 author:     "Apoorv Jagtap"
-comment:	true
+comment:	false
 published:  true
-category:	deeplearning
+tags:	deeplearning fastai datascience software
 header-img: "images/fastai.png"
 ---
 

@@ -1,10 +1,11 @@
 ---
 layout:     post
-title:      "Fastai Course Summary: Lesson 1"
+title:      "Local/Cloud setup | FastAI Lesson 1"
 date:       2016-06-23 18:00:00
 author:     "Apoorv Jagtap"
-comment:	true
+comment:	false
 published:	true
+tags:	deeplearning fastai datascience software
 header-img: "images/fastai.png"
 ---
 

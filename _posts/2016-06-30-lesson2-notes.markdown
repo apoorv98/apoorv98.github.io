@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      "Fastai Course Summary: Lesson 2"
+title:      "Our first Linear Model | FastAI Lesson 2"
 date:       2016-06-30 18:00:00
 author:     "Apoorv Jagtap"
-comment:	true
-published:  false
-category:	deeplearning
+comment:	false
+published:  true
+tags:	deeplearning fastai datascience software
 header-img: "images/fastai.png"
 ---
 
